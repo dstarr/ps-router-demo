@@ -1,3 +1,5 @@
+dist
+
 # Created by .ignore support plugin (hsz.mobi)
 ### Node template
 # Logs
@@ -60,3 +62,5 @@ typings/
 .env
 
 
+
+/dist/
