@@ -12,7 +12,7 @@ class AppContainer extends React.Component {
         };
 
         const linkContainerStyle = {
-            padding: 10,
+            padding: 20,
             position: 'fixed',
             height: '100%',
             width: 200,

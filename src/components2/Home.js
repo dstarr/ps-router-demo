@@ -2,8 +2,12 @@ import React from 'react';
 
 let Home = () => {
 
+    let imgStyle = {
+        marginTop: 50
+    };
+
     return(
-        <img src={'/assets/codelife.png'} />
+        <img style={imgStyle} src={'/assets/codelife.png'} />
     );
 };
 
