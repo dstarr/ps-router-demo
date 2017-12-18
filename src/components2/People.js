@@ -50,9 +50,9 @@ class People extends React.Component {
                     </tbody>
                 </Table>
                 <div>
-                    <input onChange={this.onNameChange} placeholder={'Name'}/>
+                    <input onChange={this.onNameChange} placeholder={'Name'} value={this.state.newName}/>
                     {' '}
-                    <input onChange={this.onOccupationChange} placeholder={'Occupation'}/>
+                    <input onChange={this.onOccupationChange} placeholder={'Occupation'} value={this.state.newOccupation}/>
                     {' '}
                     <Button onClick={this.onAddNewPerson}>Add</Button>
                 </div>
@@ -74,8 +74,11 @@ class People extends React.Component {
         };
 
         this.setState({
-            people: this.state.people.concat(person)
+            people: this.state.people.concat(person),
+            newName: '',
+            newOccupation: ''
         });
+
     };
 
     onOccupationChange = (e) => {
