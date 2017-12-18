@@ -3,6 +3,7 @@ import {BrowserRouter, HashRouter, Link, Route} from 'react-router-dom'
 import People from "../components2/People";
 import Home from "../components2/Home";
 import Places from "../components2/Places";
+import PersonProfile from "../components2/PersonProfile";
 
 class AppContainer extends React.Component {
 
@@ -44,7 +45,7 @@ class AppContainer extends React.Component {
                         <Route path={'/'} component={Home} exact/>
                         <Route path={'/places'} component={Places}/>
                         <Route path={'/people'} component={People}/>
-
+                        <Route path={'/people/:id'} component={PersonProfile}/>
                     </div>
                 </div>
             </HashRouter>

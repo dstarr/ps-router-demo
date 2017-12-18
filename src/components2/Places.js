@@ -22,6 +22,27 @@ class Places extends React.Component {
         };
     }
 
+    render = () => {
+
+        let places = this.state.places.map((place, index) => (
+            <li key={index}>{place.name}</li>
+        ));
+
+        return <div>
+            <h1>Places I've Lived</h1>
+            <ul>
+                {places}
+            </ul>
+
+            <div>
+                <input placeholder={'Place name'} type={'text'} onChange={this.onNewPlaceChange} value={this.state.newPlace}/>
+                {' '}
+                <Button onClick={this.onSubmitNewPlace}>Add</Button>
+            </div>
+
+        </div>;
+    }
+
     onNewPlaceChange = (e) => {
         this.setState({
             newPlace: e.target.value
@@ -49,29 +70,8 @@ class Places extends React.Component {
             places: places,
             newPlace: ''
         });
-    }
+    };
 
-
-    render = () => {
-
-        let places = this.state.places.map((place, index) => (
-            <li key={index}>{place.name}</li>
-        ));
-
-        return <div>
-            <h1>Places I've Lived</h1>
-            <ul>
-                {places}
-            </ul>
-
-            <div>
-                <input placeholder={'Place name'} type={'text'} onChange={this.onNewPlaceChange} value={this.state.newPlace}/>
-                {' '}
-                <Button onClick={this.onSubmitNewPlace}>Add</Button>
-            </div>
-
-        </div>;
-    }
 }
 
 export default Places

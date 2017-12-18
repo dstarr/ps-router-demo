@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Table} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 class People extends React.Component {
 
@@ -9,7 +10,7 @@ class People extends React.Component {
         let people = [
             { id:1, name: 'David Starr', occupation: 'Technical Learning Director'},
             { id:2, name: 'Scott Allen', occupation: 'Web Developer'},
-            { id:3, name: 'Matt Milner', occupation: 'Programmer'},
+            { id:3, name: 'Matt Milner', occupation: 'Programmer Extraordinaire'},
             { id:4, name: 'Ben Day', occupation: 'Pluralsight Author & Consultant'}
         ];
 
@@ -25,7 +26,7 @@ class People extends React.Component {
         let people = this.state.people.map((person, index) => (
             <tr key={index}>
                 <td>{person.id}</td>
-                <td>{person.name}</td>
+                <td><Link to={'/person/' + person.id}>{person.name}</Link></td>
                 <td>{person.occupation}</td>
                 <td>
                     <Button onClick={(e) => this.onDeletePerson(e, person.id)}>Delete</Button>
@@ -116,4 +117,3 @@ class People extends React.Component {
 }
 
 export default People;
-
