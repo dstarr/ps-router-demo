@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom'
 import People from "../components2/People";
 import Home from "../components2/Home";
+import Places from "../components2/Places";
 
 class AppContainer extends React.Component {
 
@@ -35,14 +36,14 @@ class AppContainer extends React.Component {
                         <nav>
                             <div><Link style={linkStyle} to={'/'}>Home</Link></div>
                             <div><Link style={linkStyle} to={'/people'}>People</Link></div>
-                            <div><Link style={linkStyle} to={'/routeB'}>Places</Link></div>
+                            <div><Link style={linkStyle} to={'/places'}>Places</Link></div>
                         </nav>
                     </div>
 
                     <div style={contentStyle}>
                         <Route path={'/'} component={Home} exact/>
                         <Route path={'/people'} component={People}/>
-                        {/* <Route path={'/places'} component={Places}/> */}
+                        <Route path={'/places'} component={Places}/>
                     </div>
                 </div>
             </BrowserRouter>

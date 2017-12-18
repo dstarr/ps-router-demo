@@ -29,6 +29,7 @@ class People extends React.Component {
 
         return (
             <div>
+                <h1>People</h1>
                 <Table bordered={false} responsive={true} striped={true}>
                     <thead>
                     <tr>
