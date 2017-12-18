@@ -22,7 +22,7 @@ class Places extends React.Component {
         };
     }
 
-    onNewPlaceEntry = (e) => {
+    onNewPlaceChange = (e) => {
         this.setState({
             newPlace: e.target.value
         })
@@ -65,7 +65,7 @@ class Places extends React.Component {
             </ul>
 
             <div>
-                <input placeholder={'Place name'} type={'text'} onChange={this.onNewPlaceEntry} value={this.state.newPlace}/>
+                <input placeholder={'Place name'} type={'text'} onChange={this.onNewPlaceChange} value={this.state.newPlace}/>
                 {' '}
                 <Button onClick={this.onSubmitNewPlace}>Add</Button>
             </div>

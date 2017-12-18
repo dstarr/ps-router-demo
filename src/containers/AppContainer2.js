@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Link, Route} from 'react-router-dom'
+import {BrowserRouter, HashRouter, Link, Route} from 'react-router-dom'
 import People from "../components2/People";
 import Home from "../components2/Home";
 import Places from "../components2/Places";
@@ -15,7 +15,7 @@ class AppContainer extends React.Component {
         const linkContainerStyle = {
             padding: 20,
             position: 'fixed',
-            height: '100%',
+            height: 1000,
             width: 200,
             backgroundColor: '#f0f0f0',
             top: 0
@@ -30,7 +30,7 @@ class AppContainer extends React.Component {
         };
 
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div>
                     <div style={linkContainerStyle}>
                         <nav>
@@ -42,11 +42,12 @@ class AppContainer extends React.Component {
 
                     <div style={contentStyle}>
                         <Route path={'/'} component={Home} exact/>
-                        <Route path={'/people'} component={People}/>
                         <Route path={'/places'} component={Places}/>
+                        <Route path={'/people'} component={People}/>
+
                     </div>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }
