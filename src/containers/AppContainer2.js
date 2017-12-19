@@ -4,23 +4,12 @@ import People from "../components2/People";
 import Home from "../components2/Home";
 import Places from "../components2/Places";
 import PersonProfile from "../components2/PersonProfile";
+import PageNotFound from "../components2/PageNotFound";
+import NavLinks from "../components2/NavLinks";
 
 class AppContainer extends React.Component {
 
     render = () => {
-
-        const linkStyle = {
-            fontSize: 20
-        };
-
-        const linkContainerStyle = {
-            padding: 20,
-            position: 'fixed',
-            height: 1000,
-            width: 200,
-            backgroundColor: '#f0f0f0',
-            top: 0
-        };
 
         const contentStyle = {
             flex: 1,
@@ -30,30 +19,21 @@ class AppContainer extends React.Component {
 
         };
 
-
-
         return (
             <BrowserRouter>
                 <div>
-                    <div style={linkContainerStyle}>
-                        <nav>
-                            <div><Link style={linkStyle} to={'/'}>Home</Link></div>
-                            <div><Link style={linkStyle} to={'/people'}>People</Link></div>
-                            <div><Link style={linkStyle} to={'/places'}>Places</Link></div>
-                            <div><NavLink style={linkStyle} to={'/places'}>Nope</NavLink></div>
-
-                        </nav>
+                    <div className={'leftNavContainer'}>
+                        <NavLinks />
                     </div>
 
                     <div style={contentStyle}>
                         <Switch>
+                            <Route path={'/'} component={Home} exact/>
                             <Route path={'/places'} component={Places}/>
                             <Route path={'/people'} component={People} />
                             <Route path={'/people/:userId'} component={PersonProfile}/>
-                            <Route path={'/'} component={Home}/>
+                            <Route component={PageNotFound} />
                         </Switch>
-
-
                     </div>
                 </div>
             </BrowserRouter>
