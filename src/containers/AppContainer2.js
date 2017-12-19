@@ -33,7 +33,7 @@ class AppContainer extends React.Component {
 
 
         return (
-            <HashRouter>
+            <BrowserRouter>
                 <div>
                     <div style={linkContainerStyle}>
                         <nav>
@@ -56,7 +56,7 @@ class AppContainer extends React.Component {
 
                     </div>
                 </div>
-            </HashRouter>
+            </BrowserRouter>
         );
     }
 }
