@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, HashRouter, Link, Route} from 'react-router-dom'
+import {BrowserRouter, HashRouter, Link, NavLink, Route, Switch} from 'react-router-dom'
 import People from "../components2/People";
 import Home from "../components2/Home";
 import Places from "../components2/Places";
@@ -30,6 +30,8 @@ class AppContainer extends React.Component {
 
         };
 
+
+
         return (
             <HashRouter>
                 <div>
@@ -38,14 +40,18 @@ class AppContainer extends React.Component {
                             <div><Link style={linkStyle} to={'/'}>Home</Link></div>
                             <div><Link style={linkStyle} to={'/people'}>People</Link></div>
                             <div><Link style={linkStyle} to={'/places'}>Places</Link></div>
+                            <div><NavLink style={linkStyle} to={'/places'}>Nope</NavLink></div>
+
                         </nav>
                     </div>
 
                     <div style={contentStyle}>
-                        <Route path={'/'} component={Home} exact/>
-                        <Route path={'/places'} component={Places}/>
-                        <Route path={'/people'} component={People} exact/>
-                        <Route path={'/people/:userId'} component={PersonProfile}/>
+                        <Switch>
+                            <Route path={'/places'} component={Places}/>
+                            <Route path={'/people'} component={People} />
+                            <Route path={'/people/:userId'} component={PersonProfile}/>
+                            <Route path={'/'} component={Home}/>
+                        </Switch>
 
 
                     </div>
