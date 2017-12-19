@@ -44,8 +44,10 @@ class AppContainer extends React.Component {
                     <div style={contentStyle}>
                         <Route path={'/'} component={Home} exact/>
                         <Route path={'/places'} component={Places}/>
-                        <Route path={'/people'} component={People}/>
-                        <Route path={'/people/:id'} component={PersonProfile}/>
+                        <Route path={'/people'} component={People} exact/>
+                        <Route path={'/people/:userId'} component={PersonProfile}/>
+
+
                     </div>
                 </div>
             </HashRouter>
