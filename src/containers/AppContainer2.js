@@ -22,17 +22,24 @@ class AppContainer extends React.Component {
         return (
             <BrowserRouter>
                 <div>
+                    <div className='header'>
+                        <div className={'loginLink'}>
+                            <Link className='navLink' to="/login">Login</Link>
+                        </div>
+                    </div>
+
                     <div className={'leftNavContainer'}>
-                        <NavLinks />
+                        <NavLinks/>
                     </div>
 
                     <div style={contentStyle}>
                         <Switch>
                             <Route path={'/'} component={Home} exact/>
                             <Route path={'/places'} component={Places}/>
-                            <Route path={'/people'} component={People} />
+                            <Route path={'/people'} component={People}/>
                             <Route path={'/people/:userId'} component={PersonProfile}/>
-                            <Route component={PageNotFound} />
+                            <Route component={PageNotFound}/>
+
                         </Switch>
                     </div>
                 </div>

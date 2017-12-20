@@ -2,9 +2,10 @@
     font-weight: bold;
 }
 
-.navLink {
+a.navLink {
     font-size: 18px;
     list-style-type: none;
+    color: #ffffff;
 }
 
 .leftNavContainer {
@@ -15,13 +16,25 @@
     background-color: #F15B2A;
 }
 
-a, a:hover, a:active, a:visited {
+a, a:active, a:visited, a:hover {
     text-decoration: none;
-    color: #171717;
+
 }
 
 li.nav {
     list-style-type: none;
     margin-left: -30px;
     padding: 0px;
+}
+
+.header {
+    background-color: #171717;
+    height: 75px;
+}
+
+.loginLink {
+    margin-right: 40px;
+    margin-top: 20px;
+    padding: 5px;
+    float: right;
 }
