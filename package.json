@@ -5,7 +5,7 @@
   "author": "David Starr | elegantcode.com | @elegantcoder",
   "license": "UNLICENSED",
   "scripts": {
-    "watch:test": "mocha -w --compilers js:babel-core/register --require ./test/setup.js --recursive ./test/",
+    "watch:test": "mocha -w --compilers js:babel-core/register --recursive ./src/tests/",
     "watch": "webpack --progress --colors --watch",
     "build": "webpack",
     "start": "webpack-dev-server"
@@ -17,11 +17,13 @@
     "prop-types": "latest",
     "react": "^16.0.0",
     "react-bootstrap": "^0.31.5",
+    "react-cookie": "^2.1.2",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "redux-immutable-state-invariant": "^2.1.0"
+    "redux-immutable-state-invariant": "^2.1.0",
+    "universal-cookie": "^2.1.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

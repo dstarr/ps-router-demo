@@ -1,6 +1,6 @@
 import React from 'react';
 
-let Home = () => {
+const Home = () => {
 
     let imgStyle = {
         marginTop: 50

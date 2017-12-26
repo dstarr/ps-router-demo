@@ -6,7 +6,7 @@ const dist = path.join(__dirname, 'dist');
 
 module.exports = {
 
-    entry: path.join(__dirname, 'src', 'containers', 'index.js'),
+    entry: path.join(__dirname, 'src', 'index.js'),
 
     output: {
         path: dist,

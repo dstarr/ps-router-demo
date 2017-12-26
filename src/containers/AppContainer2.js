@@ -1,13 +1,25 @@
 import React from 'react';
-import {BrowserRouter, HashRouter, Link, NavLink, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import People from "../components2/People";
 import Home from "../components2/Home";
 import Places from "../components2/Places";
 import PersonProfile from "../components2/PersonProfile";
 import PageNotFound from "../components2/PageNotFound";
 import NavLinks from "../components2/NavLinks";
+import Header from "../components2/Header";
+import ProtectedComponent from "../components2/secure/ProtectedComponent";
+import PrivateRoute from "../components2/secure/PrivateRoute";
+import Login from "../components2/secure/Login";
+import Logout from "../components2/secure/Logout";
+
+
 
 class AppContainer extends React.Component {
+
+    constructor(props){
+        super(props);
+    }
+
 
     render = () => {
 
@@ -22,22 +34,26 @@ class AppContainer extends React.Component {
         return (
             <BrowserRouter>
                 <div>
-                    <div className='header'>
-                        <div className={'loginLink'}>
-                            <Link className='navLink' to="/login">Login</Link>
-                        </div>
-                    </div>
-
+                    <Header />
                     <div className={'leftNavContainer'}>
                         <NavLinks/>
                     </div>
 
                     <div style={contentStyle}>
                         <Switch>
-                            <Route path={'/'} component={Home} exact/>
                             <Route path={'/places'} component={Places}/>
+
+                            <Route path={'/people/:userId'} component={PersonProfile} />
                             <Route path={'/people'} component={People}/>
-                            <Route path={'/people/:userId'} component={PersonProfile}/>
+
+
+                            <PrivateRoute path={'/protected'} component={ProtectedComponent} />
+
+                            <Route path={'/login'} component={Login} />
+                            <Route path={'/logout'} component={Logout} />
+
+                            <Route path={'/'} component={Home} exact/>
+
                             <Route component={PageNotFound}/>
 
                         </Switch>
