@@ -21,6 +21,9 @@ const NavLinks = () => {
             <li className={'nav'}>
                 <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/protected'}>Protected</NavLink>
             </li>
+            <li className={'nav'}>
+                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/nested'}>Nested</NavLink>
+            </li>
         </ul>
     );
 };

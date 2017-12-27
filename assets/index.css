@@ -16,6 +16,28 @@ a.navLink {
     background-color: #F15B2A;
 }
 
+.rightContentContainer {
+    flex: 1px;
+    position: fixed;
+    margin-left: 210px;
+    width: 80%;
+}
+
+.leftNavNested {
+    padding: 20px;
+    position: absolute;
+    height: 100%;
+    width: 200px;
+    background-color: #171717;
+}
+
+.rightNestedContentContainer {
+    margin-left: 210px;
+    width: 80%;
+}
+
+
+
 a, a:active, a:visited, a:hover {
     text-decoration: none;
 
@@ -29,5 +51,11 @@ li.nav {
 
 .header {
     background-color: #171717;
-    height: 75px;
+    height: 90px;
+}
+
+.headerLogo {
+    padding-top: 12px;
+    margin-left: 30px;
+    width: 75px;
 }

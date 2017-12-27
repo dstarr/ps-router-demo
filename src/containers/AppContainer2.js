@@ -11,7 +11,7 @@ import ProtectedComponent from "../components2/secure/ProtectedComponent";
 import PrivateRoute from "../components2/secure/PrivateRoute";
 import Login from "../components2/secure/Login";
 import Logout from "../components2/secure/Logout";
-import Lorem from "../components2/Lorem";
+import Nested from "../components2/Nested";
 
 
 
@@ -24,14 +24,6 @@ class AppContainer extends React.Component {
 
     render = () => {
 
-        const contentStyle = {
-            flex: 1,
-            position: 'fixed',
-            marginLeft: 210,
-            width: 800
-
-        };
-
         return (
             <BrowserRouter>
                 <div>
@@ -40,8 +32,10 @@ class AppContainer extends React.Component {
                         <NavLinks/>
                     </div>
 
-                    <div style={contentStyle}>
+                    <div className={'rightContentContainer'}>
                         <Switch>
+                            <Route path={'/nested'} component={Nested}/>
+
                             <Route path={'/places'} component={Places}/>
 
                             <Route path={'/people/:userId'} component={PersonProfile} />

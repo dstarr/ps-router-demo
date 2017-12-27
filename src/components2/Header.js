@@ -1,22 +1,16 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
-class Header extends React.Component {
+const Header = () => {
 
-    constructor(props) {
-        super(props);
+    return (
+        <div className='header'>
+            <Link to={'/'}>
+                <img src={"/assets/Retro_Pluralsight_White.png"} className={'headerLogo'}/>
+            </Link>
+        </div>
+    );
 
-    }
-
-    render = () => {
-
-        return (
-            <div className='header'>
-                <div style={{color: 'white'}} className={'loginLink'}>
-
-                </div>
-            </div>
-        );
-    };
 }
 
 export default Header;
