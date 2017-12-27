@@ -7,7 +7,7 @@ const NavLinks = () => {
     return (
         <ul>
             <li className={'nav'}>
-                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/'} exact>Home</NavLink>
+                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/'}>Home</NavLink>
             </li>
             <li className={'nav'}>
                 <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/people'}>People</NavLink>

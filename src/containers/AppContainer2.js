@@ -11,6 +11,7 @@ import ProtectedComponent from "../components2/secure/ProtectedComponent";
 import PrivateRoute from "../components2/secure/PrivateRoute";
 import Login from "../components2/secure/Login";
 import Logout from "../components2/secure/Logout";
+import Lorem from "../components2/Lorem";
 
 
 
@@ -44,7 +45,7 @@ class AppContainer extends React.Component {
                             <Route path={'/places'} component={Places}/>
 
                             <Route path={'/people/:userId'} component={PersonProfile} />
-                            <Route path={'/people'} component={People}/>
+                            <Route path={'/people/'} component={People} />
 
 
                             <PrivateRoute path={'/protected'} component={ProtectedComponent} />

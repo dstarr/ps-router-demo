@@ -1,6 +1,5 @@
 import React from 'react';
-import {Link, Route} from "react-router-dom";
-import ColorSwatch from '../../components1/ColorSwatch'
+import {Link} from "react-router-dom";
 
 const ProtectedComponent = () => {
 
@@ -10,29 +9,19 @@ const ProtectedComponent = () => {
 
     return (
 
-        <div>
-            <div style={leftDivStyle}>
-            <h1>Protected Information.</h1>
+        <div style={leftDivStyle}>
+            <h1>Protected Information</h1>
 
-           <ul>
-               <li><Link to={'/protected/a'}>Protected Document A</Link></li>
-               <li></li>
-               <li></li>
-               <li></li>
-           </ul>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum
+            </p>
 
-            <p><Link className='btn btn-primary' to={'/logout'}>Sign Out</Link></p>
-            </div>
 
-            <div>
-                <Route to={'/protected/a'} render={() => {
-                    return <ColorSwatch color={'#cecece'} text="Protected Document A"/>
-                }}/>
-
-                <Route to={'/protected/b'} render={() => {
-                    return <ColorSwatch color={'#ffcece'} text="Protected Document B"/>
-                }}/>
-            </div>
+            <Link className='btn btn-primary' to={'/logout'}>Sign Out</Link>
         </div>
 
 
