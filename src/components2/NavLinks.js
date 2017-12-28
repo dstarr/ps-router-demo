@@ -16,13 +16,13 @@ const NavLinks = () => {
                 <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/places'}>Places</NavLink>
             </li>
             <li className={'nav'}>
-                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/foo'}>Nope</NavLink>
+                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/nope'}>Nope</NavLink>
             </li>
             <li className={'nav'}>
                 <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/protected'}>Protected</NavLink>
             </li>
             <li className={'nav'}>
-                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/nested'}>Nested</NavLink>
+                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/articles'}>Articles</NavLink>
             </li>
         </ul>
     );

@@ -8,6 +8,8 @@ module.exports = {
 
     entry: path.join(__dirname, 'src', 'index.js'),
 
+    context: __dirname,
+
     output: {
         path: dist,
         filename: 'bundle.js',
@@ -42,7 +44,9 @@ module.exports = {
     },
 
     devServer: {
-      historyApiFallback: true
+        historyApiFallback: {
+            disableDotRule: true
+        }
     },
 
     plugins: [

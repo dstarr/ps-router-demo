@@ -11,7 +11,7 @@ import ProtectedComponent from "../components2/secure/ProtectedComponent";
 import PrivateRoute from "../components2/secure/PrivateRoute";
 import Login from "../components2/secure/Login";
 import Logout from "../components2/secure/Logout";
-import Nested from "../components2/Nested";
+import Articles from "../components2/Articles";
 
 
 
@@ -34,7 +34,7 @@ class AppContainer extends React.Component {
 
                     <div className={'rightContentContainer'}>
                         <Switch>
-                            <Route path={'/nested'} component={Nested}/>
+                            <Route path={'/articles'} component={Articles}/>
 
                             <Route path={'/places'} component={Places}/>
 
