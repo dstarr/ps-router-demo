@@ -23,6 +23,7 @@
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-immutable-state-invariant": "^2.1.0",
+    "superagent": "^3.8.2",
     "universal-cookie": "^2.1.2"
   },
   "devDependencies": {
@@ -36,8 +37,8 @@
     "babel-preset-stage-1": "^6.24.1",
     "chai": "^4.1.2",
     "css-loader": "^0.28.7",
-    "enzyme": "^3.1.1",
-    "enzyme-adapter-react-16": "^1.0.4",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "file-loader": "^1.1.5",
     "jsdom": "^11.5.1",
     "less": "^3.0.0-alpha.3",

@@ -1,6 +1,6 @@
 import React from 'react';
 import Redirect from "react-router-dom/es/Redirect";
-import authService from '../../services/authorization';
+import authService from '../../services/authService';
 
 class Logout extends React.Component {
 

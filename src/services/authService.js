@@ -4,22 +4,20 @@ const cookies = new Cookies();
 
 const authService = {
 
-    isAuthenticated () {
+    isAuthenticated() {
 
         let authenticated = cookies.get('auth') === 'true';
-        if(authenticated === undefined)
-            authenticated = false;
 
         return authenticated;
-
     },
 
-    signIn (cb) {
+
+    signIn(cb) {
         cookies.set('auth', true, {path: '/'})
         setTimeout(cb, 100);
     },
 
-    signOut (cb) {
+    signOut(cb) {
         cookies.set('auth', false, {path: '/'})
         setTimeout(cb, 100);
     }

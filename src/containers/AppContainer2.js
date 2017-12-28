@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
 import People from "../components2/People";
 import Home from "../components2/Home";
 import Places from "../components2/Places";
@@ -12,6 +12,7 @@ import PrivateRoute from "../components2/secure/PrivateRoute";
 import Login from "../components2/secure/Login";
 import Logout from "../components2/secure/Logout";
 import Articles from "../components2/Articles";
+import LanguagesContainer from "./LanguagesContainer";
 
 
 
@@ -34,6 +35,8 @@ class AppContainer extends React.Component {
 
                     <div className={'rightContentContainer'}>
                         <Switch>
+                            <Route path={'/languages'} component={LanguagesContainer}/>
+
                             <Route path={'/articles'} component={Articles}/>
 
                             <Route path={'/places'} component={Places}/>

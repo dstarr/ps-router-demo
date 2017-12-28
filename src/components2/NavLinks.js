@@ -4,26 +4,27 @@ import {NavLink} from "react-router-dom";
 
 const NavLinks = () => {
 
+
+    const links = [
+        { name: 'Home', url: '/'},
+        { name: 'People', url: '/people'},
+        { name: 'Places', url: '/places'},
+        { name: 'Nope', url: '/404'},
+        { name: 'Protected', url: '/protected'},
+        { name: 'Articles', url: '/articles'}
+    ];
+
+    let linksComponents = links.map((link, index) => {
+        return (
+            <li key={index} className={'nav'}>
+                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={link.url}>{link.name}</NavLink>
+            </li>
+        );
+    });
+
     return (
         <ul>
-            <li className={'nav'}>
-                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/'}>Home</NavLink>
-            </li>
-            <li className={'nav'}>
-                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/people'}>People</NavLink>
-            </li>
-            <li className={'nav'}>
-                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/places'}>Places</NavLink>
-            </li>
-            <li className={'nav'}>
-                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/nope'}>Nope</NavLink>
-            </li>
-            <li className={'nav'}>
-                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/protected'}>Protected</NavLink>
-            </li>
-            <li className={'nav'}>
-                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={'/articles'}>Articles</NavLink>
-            </li>
+            {linksComponents}
         </ul>
     );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import authService from "../../services/authorization";
+import authService from "../../services/authService";
 import {Button} from "react-bootstrap";
 import {Redirect} from "react-router-dom";
 

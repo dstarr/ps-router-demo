@@ -10,17 +10,17 @@ a.navLink {
 
 .leftNavContainer {
     padding: 20px;
-    position: fixed;
-    height: 100%;
+    position: absolute;
     width: 200px;
     background-color: #F15B2A;
+    display: inline-block;
+    height: 100%;
 }
 
 .rightContentContainer {
-    flex: 1px;
-    position: fixed;
     margin-left: 210px;
     width: 80%;
+    display: contents;
 }
 
 .leftNavNested {
@@ -36,8 +36,6 @@ a.navLink {
     width: 80%;
 }
 
-
-
 a, a:active, a:visited, a:hover {
     text-decoration: none;
 
@@ -52,6 +50,7 @@ li.nav {
 .header {
     background-color: #171717;
     height: 90px;
+
 }
 
 .headerLogo {

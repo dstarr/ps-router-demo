@@ -1,5 +1,5 @@
 import assert from 'assert';
-import authService from '../services/authorization';
+import authService from '../services/authService';
 import Cookies from 'universal-cookie';
 
 
@@ -14,14 +14,8 @@ describe('authService', () =>  {
         };
 
         it('is false by default', () => {
-            assert.equal(false, authService.isAuthenticated())
+            assert.equal(authService.isAuthenticated(), false)
         });
-
-        it('can authorize', () => {
-            authService.signIn(() => {})
-            assert.equal(true, authService.isAuthenticated())
-        });
-
 
     });
 
@@ -33,17 +27,17 @@ describe('authService', () =>  {
         };
 
         it('shows as authorized', () => {
-            assert.equal(true, authService.isAuthenticated());
+            assert.equal(authService.isAuthenticated(), true);
         });
 
         it('shows as authorized twice in a row', () => {
-            assert.equal(true, authService.isAuthenticated());
-            assert.equal(true, authService.isAuthenticated());
+            assert.equal(authService.isAuthenticated(), true);
+            assert.equal(authService.isAuthenticated(), true);
         });
 
         it('can be signed out', () => {
             authService.signOut(() => {});
-            assert.equal(false, authService.isAuthenticated());
+            assert.equal(authService.isAuthenticated(), false);
 
             let cookie = cookies.get('auth');
             assert.equal(undefined, cookie);
