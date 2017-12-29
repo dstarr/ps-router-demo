@@ -13,6 +13,7 @@ import Login from "../components2/secure/Login";
 import Logout from "../components2/secure/Logout";
 import Articles from "../components2/Articles";
 import LanguagesContainer from "./LanguagesContainer";
+import PersonProfileContainer from "./PersonProfileContainer";
 
 
 
@@ -35,23 +36,14 @@ class AppContainer extends React.Component {
 
                     <div className={'rightContentContainer'}>
                         <Switch>
-                            <Route path={'/languages'} component={LanguagesContainer}/>
-
                             <Route path={'/articles'} component={Articles}/>
-
                             <Route path={'/places'} component={Places}/>
-
-                            <Route path={'/people/:userId'} component={PersonProfile} />
+                            <Route path={'/people/:userId'} component={PersonProfileContainer} />
                             <Route path={'/people/'} component={People} />
-
-
                             <PrivateRoute path={'/protected'} component={ProtectedComponent} />
-
                             <Route path={'/login'} component={Login} />
                             <Route path={'/logout'} component={Logout} />
-
                             <Route path={'/'} component={Home} exact/>
-
                             <Route component={PageNotFound}/>
 
                         </Switch>
