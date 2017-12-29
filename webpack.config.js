@@ -8,11 +8,11 @@ module.exports = {
 
     entry: path.join(__dirname, 'src', 'index.js'),
 
-    context: __dirname,
+    context: path.resolve(__dirname),
 
     output: {
-        path: dist,
-        filename: 'bundle.js',
+        path: __dirname,
+        filename: './bundle.js',
         publicPath: '/dist/'
     },
 
@@ -45,7 +45,6 @@ module.exports = {
 
     devServer: {
         historyApiFallback: {
-            disableDotRule: true,
             index: '/index.html'
         }
     },
