@@ -1,3 +1,3 @@
-# learn-redux
+# ps-router-demo
 
-Just a project for me to use learning redux.
+A project used to demo the capabilities of React Router 4.
