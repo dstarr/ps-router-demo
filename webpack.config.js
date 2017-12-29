@@ -45,7 +45,8 @@ module.exports = {
 
     devServer: {
         historyApiFallback: {
-            disableDotRule: true
+            disableDotRule: true,
+            index: '/index.html'
         }
     },
 
