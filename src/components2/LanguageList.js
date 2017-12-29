@@ -8,14 +8,20 @@ class LanguageList extends React.Component {
         super(props);
 
         this.state = {
-            languages: []
+            letter: this.props.match.params.letter
         };
     }
 
-    componentDidMount = () => {
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            letter: nextProps.match.params.letter
+        })
+    }
 
-        const letter = this.props.match.params.letter;
-        let languages = this.props.languages;
+    getKnownLanguages = () => {
+
+        const letter = this.state.letter;
+        const languages = this.props.languages;
         let knownLanguages = [];
 
         for (let i = 0; i < languages.length; i++) {
@@ -23,21 +29,21 @@ class LanguageList extends React.Component {
                 knownLanguages.push(languages[i].item);
             }
         }
-        this.setState({
-            languages: knownLanguages
-        });
 
+        return knownLanguages;
     };
 
     render = () => {
 
-        let languages = this.state.languages.map((lang, index) => {
+        let knownLanguages = this.getKnownLanguages();
+
+        let languages = knownLanguages.map((lang, index) => {
             return <li key={index}><a href={lang.id} target={'_blank'}>{lang.name}</a></li>
         });
 
         return (
             <div>
-                <h1>{this.props.match.params.letter}</h1>
+                <h1>{this.state.letter}</h1>
                 <ul>
                     {languages}
                 </ul>
@@ -47,8 +53,7 @@ class LanguageList extends React.Component {
 }
 
 LanguageList.PropTypes = {
-    languages: PropTypes.array.isRequired,
-    letter: PropTypes.array.isRequired
+    languages: PropTypes.array.isRequired
 };
 
 export default withRouter(LanguageList);

@@ -44,6 +44,7 @@ const PersonProfile = (props) => {
             {letterLinks}
 
             <Route path={'/people/:userId/:letter'} render={() => {
+                console.log("ROUTER FIRING");
                 return <LanguageList languages={props.languages} />
             }} />
 
