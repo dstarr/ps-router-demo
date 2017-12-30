@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ColorSwatch = (props) => {
 
@@ -7,7 +8,10 @@ const ColorSwatch = (props) => {
         textAlign: 'center',
         padding: 20,
         borderColor: '#000000',
-        borderStyle: 'solid'
+        borderStyle: 'solid',
+        width: props.width,
+        margin:15
+
     };
 
     return (
@@ -16,6 +20,11 @@ const ColorSwatch = (props) => {
         </div>
     );
 
+};
+
+ColorSwatch.PropTypes = {
+    color: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
 };
 
 export default ColorSwatch;

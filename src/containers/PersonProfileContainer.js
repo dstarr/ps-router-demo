@@ -1,7 +1,6 @@
 import React from 'react';
 import request from 'superagent'
-import Languages from "../components2/Languages";
-import PersonProfile from "../components2/PersonProfile";
+import PersonProfile from "../components/PersonProfile";
 
 class PersonProfileContainer extends React.Component {
 

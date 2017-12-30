@@ -7,8 +7,8 @@ const NavLinks = () => {
 
     const links = [
         { name: 'Home', url: '/'},
+        { name: 'Colors', url: '/colors'},
         { name: 'People', url: '/people'},
-        { name: 'Places', url: '/places'},
         { name: 'Nope', url: '/404'},
         { name: 'Protected', url: '/protected'},
         { name: 'Articles', url: '/articles'}
