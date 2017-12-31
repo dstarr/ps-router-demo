@@ -14,10 +14,9 @@ import PersonProfileContainer from "./PersonProfileContainer";
 import Colors from "../components/colors/Colors";
 
 
-
 class AppContainer extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
@@ -25,9 +24,9 @@ class AppContainer extends React.Component {
     render = () => {
 
         return (
-            <HashRouter>
+            <BrowserRouter>
                 <div>
-                    <Header />
+                    <Header/>
                     <div className={'leftNavContainer'}>
                         <NavLinks/>
                     </div>
@@ -36,14 +35,12 @@ class AppContainer extends React.Component {
                         <Switch>
                             <Route path={'/colors'} component={Colors}/>
 
-                            <Route path={'/articles'} component={Articles}/>
+                            <Route path={'/people/:userId'} component={PersonProfileContainer}/>
+                            <Route path={'/people/'} component={People}/>
 
-                            <Route path={'/people/:userId'} component={PersonProfileContainer} />
-                            <Route path={'/people/'} component={People} />
-
-                            <PrivateRoute path={'/protected'} component={ProtectedComponent} />
-                            <Route path={'/login'} component={Login} />
-                            <Route path={'/logout'} component={Logout} />
+                            <PrivateRoute path={'/protected'} component={ProtectedComponent}/>
+                            <Route path={'/login'} component={Login}/>
+                            <Route path={'/logout'} component={Logout}/>
 
                             <Route path={'/'} component={Home} exact/>
 
@@ -51,7 +48,7 @@ class AppContainer extends React.Component {
                         </Switch>
                     </div>
                 </div>
-            </HashRouter>
+            </BrowserRouter>
         );
     }
 }

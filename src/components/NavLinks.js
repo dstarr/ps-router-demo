@@ -9,9 +9,8 @@ const NavLinks = () => {
         { name: 'Home', url: '/'},
         { name: 'Colors', url: '/colors'},
         { name: 'People', url: '/people'},
-        { name: 'Nope', url: '/404'},
         { name: 'Protected', url: '/protected'},
-        { name: 'Articles', url: '/articles'}
+        { name: 'Not Found', url: '/404'}
     ];
 
     let linksComponents = links.map((link, index) => {
