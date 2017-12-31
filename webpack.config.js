@@ -1,8 +1,7 @@
 const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 //const webpack = require('webpack');
 //const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-
-const dist = path.join(__dirname, 'dist');
 
 module.exports = {
 
@@ -11,9 +10,9 @@ module.exports = {
     context: path.resolve(__dirname),
 
     output: {
-        path: __dirname,
+        path: path.join(__dirname, '/dist'),
         filename: './bundle.js',
-        publicPath: '/dist/'
+        publicPath: '/dist'
     },
 
     module: {
@@ -30,11 +29,13 @@ module.exports = {
                 test: /\.less/,
                 loader: 'style-loader!css-loader!less-loader'
             },
+
             // Used for Bootstrap CSS Source Files
             {
                 test: /\.css/,
                 loader: 'style-loader!css-loader'
             },
+
             // Used for Bootstrap Glyphicon Fonts
             {
                 test: /\.(woff2|woff|ttf|svg|eot)$/,
@@ -43,13 +44,16 @@ module.exports = {
         ]
     },
 
+    plugins: [
+        new HtmlWebpackPlugin()
+        //new UglifyJSPlugin()
+
+    ],
+
     devServer: {
-        historyApiFallback: {
-            index: '/index.html'
-        }
+        historyApiFallback: true
     },
 
     plugins: [
-        //new UglifyJSPlugin()
     ]
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, HashRouter, Redirect, Route, Switch} from 'react-router-dom'
 import People from "../components/People";
 import Home from "../components/Home";
 import PageNotFound from "../components/PageNotFound";
@@ -25,7 +25,7 @@ class AppContainer extends React.Component {
     render = () => {
 
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div>
                     <Header />
                     <div className={'leftNavContainer'}>
@@ -46,12 +46,12 @@ class AppContainer extends React.Component {
                             <Route path={'/logout'} component={Logout} />
 
                             <Route path={'/'} component={Home} exact/>
-                            <Route component={PageNotFound}/>
 
+                            <Route component={PageNotFound}/>
                         </Switch>
                     </div>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }

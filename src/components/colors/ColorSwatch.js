@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {withRouter} from "react-router-dom";
 
 const ColorSwatch = (props) => {
 
@@ -17,6 +18,7 @@ const ColorSwatch = (props) => {
     return (
         <div style={style}>
             <h2>{props.text}</h2>
+            <h3>{props.match.path}</h3>
         </div>
     );
 
@@ -27,4 +29,4 @@ ColorSwatch.PropTypes = {
     text: PropTypes.string.isRequired
 };
 
-export default ColorSwatch;
+export default withRouter(ColorSwatch);

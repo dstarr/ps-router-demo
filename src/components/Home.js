@@ -3,7 +3,9 @@ import React from 'react';
 const Home = () => {
 
     let imgStyle = {
-        marginTop: 50
+        marginTop: 50,
+        width: 400,
+        textAlign: 'center'
     };
 
     return(
