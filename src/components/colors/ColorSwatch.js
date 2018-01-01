@@ -10,15 +10,13 @@ const ColorSwatch = (props) => {
         padding: 20,
         borderColor: '#000000',
         borderStyle: 'solid',
-        width: props.width,
         margin:15
-
     };
 
     return (
         <div style={style}>
             <h2>{props.text}</h2>
-            <h3>{props.match.path}</h3>
+            <h4>{props.match.path}</h4>
         </div>
     );
 
