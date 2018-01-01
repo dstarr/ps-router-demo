@@ -38,7 +38,7 @@ class LanguageList extends React.Component {
         let knownLanguages = this.getKnownLanguages();
 
         let languages = knownLanguages.map((lang, index) => {
-            return <li key={index}><a href={lang.id} target={'_blank'}>{lang.name}</a></li>
+            return <li key={index}><a href={lang.id} target={'blank'}>{lang.name}</a></li>
         });
 
         return (

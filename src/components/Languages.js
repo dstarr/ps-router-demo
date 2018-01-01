@@ -34,13 +34,11 @@ const Languages = (props) => {
         <div>
             <h1>Programming Languages</h1>
 
-            <h3>{letterLinks}</h3>
+            <h4>{letterLinks}</h4>
 
             <ul>
                 {languages}
             </ul>
-
-
         </div>
     );
 };

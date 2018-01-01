@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, HashRouter, Redirect, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, HashRouter, Route, Switch} from 'react-router-dom'
 import People from "../components/People";
 import Home from "../components/Home";
 import PageNotFound from "../components/PageNotFound";
@@ -9,7 +9,6 @@ import ProtectedComponent from "../components/secure/ProtectedComponent";
 import PrivateRoute from "../components/secure/PrivateRoute";
 import Login from "../components/secure/Login";
 import Logout from "../components/secure/Logout";
-import Articles from "../components/Articles";
 import PersonProfileContainer from "./PersonProfileContainer";
 import Colors from "../components/colors/Colors";
 

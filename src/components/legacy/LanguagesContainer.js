@@ -1,6 +1,6 @@
 import React from 'react';
 import request from 'superagent'
-import Languages from "../components/Languages";
+import Languages from "../Languages";
 
 class LanguagesContainer extends React.Component {
 
@@ -16,7 +16,7 @@ class LanguagesContainer extends React.Component {
         request
             .get('/assets/languageData.json')
             .end((err, res) => {
-                if(err) {
+                if (err) {
                     console.log('ERROR CODE: ' + err.response);
                     return;
                 }
@@ -33,7 +33,7 @@ class LanguagesContainer extends React.Component {
     render = () => {
 
         return (
-            <Languages languages={this.state.languages} />
+            <Languages languages={this.state.languages}/>
         );
     }
 }
