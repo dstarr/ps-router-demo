@@ -1,17 +1,17 @@
 import React from 'react';
-import {BrowserRouter, HashRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import Colors from "../components/colors/Colors";
+import Header from "../components/Header";
+import PageNotFound from "../components/PageNotFound";
 import People from "../components/People";
 import Home from "../components/Home";
-import PageNotFound from "../components/PageNotFound";
 import NavLinks from "../components/NavLinks";
-import Header from "../components/Header";
 import ProtectedComponent from "../components/secure/ProtectedComponent";
 import PrivateRoute from "../components/secure/PrivateRoute";
 import Login from "../components/secure/Login";
 import Logout from "../components/secure/Logout";
 import PersonProfileContainer from "./PersonProfileContainer";
-import Colors from "../components/colors/Colors";
-
+import AddressForm from "../components/AddressForm";
 
 class AppContainer extends React.Component {
 
@@ -33,6 +33,7 @@ class AppContainer extends React.Component {
                     <div className={'rightContentContainer'}>
                         <Switch>
                             <Route path={'/colors'} component={Colors}/>
+                            <Route path={'/prompt'} component={AddressForm}/>
 
                             <Route path={'/people/:userId'} component={PersonProfileContainer}/>
                             <Route path={'/people/'} component={People}/>
