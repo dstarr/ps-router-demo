@@ -13,7 +13,6 @@ import Logout from "../components/secure/Logout";
 import PersonProfileContainer from "./PersonProfileContainer";
 import AddressForm from "../components/AddressForm";
 import History from "../components/History";
-import PersonProfile from "../components/PersonProfile";
 
 class AppContainer extends React.Component {
 
@@ -21,6 +20,9 @@ class AppContainer extends React.Component {
         super(props);
     }
 
+
+
+    // - build NavLinks when putting in the 3rd link
 
     render = () => {
 

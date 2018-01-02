@@ -61,7 +61,7 @@ const PersonProfile = (props) => {
 
             {letterLinks}
 
-            <Route path={'/people/:userId/:letter'} render={() => {
+            <Route path={`${props.match.url}/:letter`} render={() => {
                 return <LanguageList languages={props.languages}/>
             }}/>
 
