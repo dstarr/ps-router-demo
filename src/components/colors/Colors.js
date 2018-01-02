@@ -27,10 +27,6 @@ const Colors = ({match}) => {
             <h2>Colors Home</h2>
 
             <h4>
-
-
-
-
                 <Link to={'/colors'}>Colors Home</Link>
                 {' | '}
                 <Link to={'/colors/child'}>/child</Link>

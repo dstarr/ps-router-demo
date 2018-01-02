@@ -8,7 +8,7 @@ class LanguageList extends React.Component {
         super(props);
 
         this.state = {
-            letter: this.props.match.params.letter
+            letter: null
         };
     }
 

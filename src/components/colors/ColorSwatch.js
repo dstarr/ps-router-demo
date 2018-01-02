@@ -4,13 +4,13 @@ import {withRouter} from "react-router-dom";
 
 const ColorSwatch = (props) => {
 
-    let style={
+    let style = {
         backgroundColor: props.color,
         textAlign: 'center',
         padding: 20,
         borderColor: '#000000',
         borderStyle: 'solid',
-        margin:15
+        margin: 15
     };
 
     return (

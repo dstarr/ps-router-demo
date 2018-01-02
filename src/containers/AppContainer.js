@@ -13,6 +13,7 @@ import Logout from "../components/secure/Logout";
 import PersonProfileContainer from "./PersonProfileContainer";
 import AddressForm from "../components/AddressForm";
 import History from "../components/History";
+import PersonProfile from "../components/PersonProfile";
 
 class AppContainer extends React.Component {
 
@@ -37,7 +38,7 @@ class AppContainer extends React.Component {
                             <Route path={'/history'} component={History}/>
                             <Route path={'/prompt'} component={AddressForm}/>
 
-                            <Route path={'/people/:userId'} component={PersonProfileContainer}/>
+                            <Route path={'/people/:id'} component={PersonProfileContainer}/>
                             <Route path={'/people/'} component={People}/>
 
                             <PrivateRoute path={'/protected'} component={ProtectedComponent}/>
