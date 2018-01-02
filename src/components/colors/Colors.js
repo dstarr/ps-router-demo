@@ -1,6 +1,6 @@
 import React from 'react';
 import ColorSwatch from "./ColorSwatch";
-import {Link, Route} from "react-router-dom";
+import {Link, Route, Switch} from "react-router-dom";
 import SmartColorSwatch from "./SmartColorSwatch";
 
 const Colors = (props) => {
@@ -23,31 +23,37 @@ const Colors = (props) => {
             <h3>
                 <Link to={'/colors/child'}>/child</Link>
                 {' | '}
+                <Link to={'/colors/child/foo'}>/child/foo</Link>
+                {' | '}
                 <Link to={'/colors/childA'}>/childA</Link>
                 {' | '}
-                <Link to={'/colors/child1'}>/child1</Link>
+                <Link to={'/colors/child1/'}>/child1</Link>
                 {' | '}
-                <Link to={'/colors/00ff00/Smart Component'}>/color/id</Link>
+                <Link to={'/colors/child/00ff00/Green Component'}>/child/:color/:text</Link>
+                {' | '}
+                <Link to={'/colors/404/404/404/404/'}>/404</Link>
+
 
             </h3>
 
 
             <div>
 
-                <Route path={`${match.url}/child`}
-                       render={() => <ColorSwatch color='#F6817D' text='Component 1'/>}/>
+                <Switch>
+                    <Route path={`${match.url}/child/:color/:text`}
+                           render={() => <SmartColorSwatch/>}/>
 
-                <Route path={`${match.url}/child*`}
-                       render={() => <ColorSwatch color='#8FABF6' text='Component 2'/>}/>
+                    <Route path={`${match.url}/child`} exact={true}
+                           render={() => <ColorSwatch color='#F6817D' text='Component 1'/>}/>
 
-                <Route path={`${match.url}/:color/:text`}
-                       render={() => <SmartColorSwatch/>}/>
+                    <Route path={`${match.url}/child/*`}
+                           render={() => <ColorSwatch color='#8FABF6' text='Component 2'/>}/>
 
-                <Route path={`${match.url}/:child`}
-                       render={() => <ColorSwatch color='#cfcfcf' text='Component 3'/>}/>
+                    <Route path={`${match.url}/:child`} exact={true}
+                           render={() => <ColorSwatch color='#cfcfcf' text='Component 3'/>}/>
 
-
-                <Route render={() => <ColorSwatch color='red' text='Component 404'/>}/>
+                    <Route render={() => <ColorSwatch color='red' text='Component 404'/>}/>
+                </Switch>
 
 
             </div>

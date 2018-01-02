@@ -12,6 +12,7 @@ import Login from "../components/secure/Login";
 import Logout from "../components/secure/Logout";
 import PersonProfileContainer from "./PersonProfileContainer";
 import AddressForm from "../components/AddressForm";
+import History from "../components/History";
 
 class AppContainer extends React.Component {
 
@@ -32,6 +33,7 @@ class AppContainer extends React.Component {
 
                     <div className={'rightContentContainer'}>
                         <Switch>
+                            <Route path={'/history'} component={History}/>
                             <Route path={'/colors'} component={Colors}/>
                             <Route path={'/prompt'} component={AddressForm}/>
 

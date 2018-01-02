@@ -9,6 +9,7 @@ const NavLinks = () => {
         { name: 'Home', url: '/'},
         { name: 'Colors', url: '/colors'},
         { name: 'Prompt', url: '/prompt'},
+        { name: 'History', url: '/history'},
         { name: 'People', url: '/people'},
         { name: 'Protected', url: '/protected'},
         { name: 'Not Found', url: '/404'}
