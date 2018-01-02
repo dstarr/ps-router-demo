@@ -28,7 +28,7 @@ a.navLink {
     position: absolute;
     height: 100%;
     width: 200px;
-    background-color: #171717;
+    background-color: #000000;
 }
 
 .rightNestedContentContainer {
@@ -48,7 +48,7 @@ li.nav {
 }
 
 .header {
-    background-color: #171717;
+    background-color: #000000;
     height: 90px;
 
 }

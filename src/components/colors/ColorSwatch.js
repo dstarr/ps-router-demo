@@ -16,7 +16,7 @@ const ColorSwatch = (props) => {
     return (
         <div style={style}>
             <h2>{props.text}</h2>
-            <h4>{props.match.path}</h4>
+            <h3>{props.match.path}</h3>
         </div>
     );
 

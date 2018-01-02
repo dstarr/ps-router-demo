@@ -3,7 +3,7 @@ import ColorSwatch from "./ColorSwatch";
 import {Link, Route, Switch} from "react-router-dom";
 import SmartColorSwatch from "./SmartColorSwatch";
 
-const Colors = (props) => {
+const Colors = ({match}) => {
 
     let style = {
         textAlign: 'center',
@@ -13,14 +13,26 @@ const Colors = (props) => {
         marginTop: 15
     };
 
-    let match = props.match;
+    // 1. Show ColorSwatch and the props it wants
+    // 2. Show how to render using home and the home route
+    // - Use the Home Page "Welcome to" component
+    //
+    // 1. add links one at a time, hitting a new route with each link
+    // 2. Add routes a at a time to meet the requirements of the links
+    // 3. Explain every component match
 
     return (
         <div style={style}>
 
             <h2>Colors Home</h2>
 
-            <h3>
+            <h4>
+
+
+
+
+                <Link to={'/colors'}>Colors Home</Link>
+                {' | '}
                 <Link to={'/colors/child'}>/child</Link>
                 {' | '}
                 <Link to={'/colors/child/foo'}>/child/foo</Link>
@@ -29,38 +41,33 @@ const Colors = (props) => {
                 {' | '}
                 <Link to={'/colors/child1/'}>/child1</Link>
                 {' | '}
-                <Link to={'/colors/child/00ff00/Green Component'}>/child/:color/:text</Link>
-                {' | '}
-                <Link to={'/colors/404/404/404/404/'}>/404</Link>
-
-
-            </h3>
-
+                <Link to={'/colors/child/9BC850/Green Component'}>/child/:color/:text</Link>
+            </h4>
 
             <div>
 
-                <Switch>
-                    <Route path={`${match.url}/child/:color/:text`}
-                           render={() => <SmartColorSwatch/>}/>
+                <Route path={`${match.url}`} exact={true}
+                       render={() => <ColorSwatch color='#F15B2A' text='Welcome to Colors'/>}/>
 
-                    <Route path={`${match.url}/child`} exact={true}
-                           render={() => <ColorSwatch color='#F6817D' text='Component 1'/>}/>
+                <Route path={`${match.url}/child`} exact={true}
+                       render={() => <ColorSwatch color='#675BA7' text='Component 1'/>}/>
 
-                    <Route path={`${match.url}/child/*`}
-                           render={() => <ColorSwatch color='#8FABF6' text='Component 2'/>}/>
+                <Route path={`${match.url}/child/*`}
+                       render={() => <ColorSwatch color='#A62E5C' text='Component 2'/>}/>
 
-                    <Route path={`${match.url}/:child`} exact={true}
-                           render={() => <ColorSwatch color='#cfcfcf' text='Component 3'/>}/>
+                <Route path={`${match.url}/child([1-9+])`} exact={true}
+                       render={() => <ColorSwatch color='#675BA7' text='Component 3'/>}/>
 
-                    <Route render={() => <ColorSwatch color='red' text='Component 404'/>}/>
-                </Switch>
+                <Route path={`${match.url}/child/:color/:text`}
+                       render={() => <SmartColorSwatch/>}/>
 
+                <Route path={`${match.url}/:child`} exact={true}
+                       render={() => <ColorSwatch color='#9BC850' text='Component 4'/>}/>
 
             </div>
         </div>
 
     );
-
-};
+}
 
 export default Colors;

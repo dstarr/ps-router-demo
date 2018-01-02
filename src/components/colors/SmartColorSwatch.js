@@ -16,7 +16,7 @@ const SmartColorSwatch = ({match}) => {
     return (
         <div style={style}>
             <h2>{match.params.text}</h2>
-            <h4>{match.path}</h4>
+            <h3>{match.path}</h3>
         </div>
     );
 

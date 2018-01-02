@@ -27,7 +27,7 @@ class History extends React.Component {
         }
 
         this.state.history.push(url)
-        // "/colors?q=react"
+        // "/colors?the=query"
     };
 
     render = () => {
@@ -45,7 +45,7 @@ class History extends React.Component {
 
                 </h4>
 
-                <h4>Location: {`${this.props.location.pathname}${this.props.location.search}${this.props.location.hash}`}</h4>
+                <h3>Location: {`${this.props.location.pathname}${this.props.location.search}${this.props.location.hash}`}</h3>
 
                 <p>Time Stamp: {Date.now()}</p>
 

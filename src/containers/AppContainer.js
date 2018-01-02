@@ -33,8 +33,8 @@ class AppContainer extends React.Component {
 
                     <div className={'rightContentContainer'}>
                         <Switch>
-                            <Route path={'/history'} component={History}/>
                             <Route path={'/colors'} component={Colors}/>
+                            <Route path={'/history'} component={History}/>
                             <Route path={'/prompt'} component={AddressForm}/>
 
                             <Route path={'/people/:userId'} component={PersonProfileContainer}/>
@@ -44,7 +44,7 @@ class AppContainer extends React.Component {
                             <Route path={'/login'} component={Login}/>
                             <Route path={'/logout'} component={Logout}/>
 
-                            <Route path={'/'} component={Home} exact/>
+                            <Route path={'/'} component={Home} />
 
                             <Route component={PageNotFound}/>
                         </Switch>
