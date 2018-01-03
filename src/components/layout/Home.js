@@ -4,7 +4,7 @@ const Home = () => {
 
     let imgStyle = {
         marginTop: 50,
-        width: 400,
+        width: 500,
         textAlign: 'center'
     };
 

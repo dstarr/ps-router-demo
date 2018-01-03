@@ -64,7 +64,6 @@ class AddressForm extends React.Component {
             });
         }
 
-        props.match.location = '/colors';
     };
 
     onHandleLastNameChange = (e) => {
