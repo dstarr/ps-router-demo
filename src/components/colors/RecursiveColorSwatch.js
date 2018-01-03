@@ -6,15 +6,11 @@ const RecursiveColorSwatch = ({match}) => {
     const color = match.params.color;
     const text = match.params.text;
 
-    console.log(`GOT IT ${color}`);
-    console.log(`GOT IT ${text}`);
-
-
-    if(color === '' ||  text === '')
+    // stop the recursion
+    if( color === '' ||  text === '' ||
+        color === undefined ||  text === undefined)
         return null;
 
-    if(color === undefined ||  text === undefined)
-        return null;
 
     let style={
         backgroundColor: color,
@@ -30,8 +26,11 @@ const RecursiveColorSwatch = ({match}) => {
         <div style={style}>
             <h2>{text}</h2>
             <h3>{match.path}</h3>
-
-            <h4><Link to={`${match.url}/9BC850/Child`}>Next</Link></h4>
+            <h4>
+                <Link to={`${match.url}/ececec/Child`}>Add Child</Link>
+                {' | '}
+                <Link to={`${match.url}`}>Close Child</Link>
+            </h4>
 
             <Route path={`${match.url}/:color/:text`} component={RecursiveColorSwatch}/>
 
@@ -40,4 +39,4 @@ const RecursiveColorSwatch = ({match}) => {
 
 };
 
-export default withRouter(RecursiveColorSwatch);
+export default RecursiveColorSwatch;
