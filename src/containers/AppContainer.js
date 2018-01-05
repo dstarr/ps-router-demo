@@ -1,15 +1,17 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import Colors from "../components/colors/Colors";
 import Header from "../components/layout/Header";
-import PageNotFound from "../components/PageNotFound";
-import People from "../components/People";
 import Home from "../components/layout/Home";
+import PageNotFound from "../components/PageNotFound";
+import Colors from "../components/colors/Colors";
 import NavLinks from "../components/layout/NavLinks";
+
 import ProtectedComponent from "../components/secure/ProtectedComponent";
 import PrivateRoute from "../components/secure/PrivateRoute";
 import Login from "../components/secure/Login";
 import Logout from "../components/secure/Logout";
+
+import People from "../components/people/People";
 import PersonProfileContainer from "./PersonProfileContainer";
 import AddressForm from "../components/AddressForm";
 import History from "../components/History";

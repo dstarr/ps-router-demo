@@ -1,6 +1,6 @@
 import React from 'react';
 import request from 'superagent'
-import Languages from "../Languages";
+import Languages from "../people/Languages";
 
 class LanguagesContainer extends React.Component {
 
