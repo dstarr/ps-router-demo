@@ -37,7 +37,7 @@ const Colors = ({match}) => {
                 {' | '}
                 <Link to={'/colors/child1/'}>/child1</Link>
                 {' | '}
-                <Link to={'/colors/child/9BC850/Green Component'}>/child/:color/:text</Link>
+                <Link to={'/colors/child/9BC850/Green Component'}>/child/9BC850/Green Component</Link>
             </h4>
 
             <div>

@@ -21,8 +21,6 @@ class AppContainer extends React.Component {
         super(props);
     }
 
-
-
     // - build NavLinks when putting in the 3rd link
 
     render = () => {
@@ -36,6 +34,7 @@ class AppContainer extends React.Component {
                     </div>
 
                     <div className={'rightContentContainer'}>
+
                         <Switch>
                             <Route path={'/colors'} component={Colors}/>
                             <Route path={'/history'} component={History}/>
@@ -54,6 +53,8 @@ class AppContainer extends React.Component {
                             <Route path={'/'} component={Home} exact/>
 
                             <Route component={PageNotFound}/>
+                            <Route children={() => ( <PageNotFound text={'You have no idea what you are looking for, do you?'} /> )} />
+
                         </Switch>
                     </div>
                 </div>

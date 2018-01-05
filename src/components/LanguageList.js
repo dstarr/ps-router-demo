@@ -18,21 +18,6 @@ class LanguageList extends React.Component {
         })
     }
 
-    getKnownLanguages = () => {
-
-        const letter = this.state.letter;
-        const languages = this.props.languages;
-        let knownLanguages = [];
-
-        for (let i = 0; i < languages.length; i++) {
-            if (languages[i].item.name.toUpperCase().startsWith(letter)) {
-                knownLanguages.push(languages[i].item);
-            }
-        }
-
-        return knownLanguages;
-    };
-
     render = () => {
 
         let knownLanguages = this.getKnownLanguages();
@@ -49,7 +34,22 @@ class LanguageList extends React.Component {
                 </ul>
             </div>
         );
-    }
+    };
+
+    getKnownLanguages = () => {
+
+        const letter = this.state.letter;
+        const languages = this.props.languages;
+        let knownLanguages = [];
+
+        for (let i = 0; i < languages.length; i++) {
+            if (languages[i].item.name.toUpperCase().startsWith(letter)) {
+                knownLanguages.push(languages[i].item);
+            }
+        }
+
+        return knownLanguages;
+    };
 }
 
 LanguageList.PropTypes = {

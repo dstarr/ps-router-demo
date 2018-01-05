@@ -1,7 +1,5 @@
 const path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-//const webpack = require('webpack');
-//const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
@@ -10,8 +8,8 @@ module.exports = {
     context: path.resolve(__dirname),
 
     output: {
-        path: path.join(__dirname, '/dist'),
-        filename: './bundle.js',
+        path: path.join(__dirname, '/public/dist'),
+        filename: 'bundle.js',
         publicPath: '/dist'
     },
 

@@ -10,26 +10,6 @@ class History extends React.Component {
         };
     }
 
-    goForward = () => {
-        this.state.history.goForward();
-    };
-
-    goBack = () => {
-        this.state.history.goBack();
-    };
-
-    pushColors = () => {
-
-        let url = {
-            pathname: '/colors',
-            search: '?the=query',
-            state: { some: 'state' }
-        }
-
-        this.state.history.push(url)
-        // "/colors?the=query"
-    };
-
     render = () => {
 
 
@@ -53,7 +33,27 @@ class History extends React.Component {
 
             </div>
         );
-    }
+    };
+
+    goForward = () => {
+        this.state.history.goForward();
+    };
+
+    goBack = () => {
+        this.state.history.goBack();
+    };
+
+    pushColors = () => {
+
+        let url = {
+            pathname: '/colors',
+            search: '?the=query',
+            state: { some: 'state' }
+        }
+
+        this.state.history.push(url)
+        // "/colors?the=query"
+    };
 }
 
 export default History
