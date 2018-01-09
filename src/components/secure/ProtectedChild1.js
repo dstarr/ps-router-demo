@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-const ProtectedComponent = () => {
+const ProtectedChild1 = () => {
 
     const leftDivStyle = {
         display: 'inline'
@@ -10,7 +10,7 @@ const ProtectedComponent = () => {
     return (
 
         <div style={leftDivStyle}>
-            <h1>Protected Information</h1>
+            <h2>Protected Component 1</h2>
 
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -20,12 +20,10 @@ const ProtectedComponent = () => {
                 culpa qui officia deserunt mollit anim id est laborum
             </p>
 
-
-            <Link className='btn btn-primary' to={'/logout'}>Sign Out</Link>
         </div>
 
 
     );
 };
 
-export default ProtectedComponent
+export default ProtectedChild1;

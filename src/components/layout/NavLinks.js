@@ -12,6 +12,7 @@ const NavLinks = () => {
         { name: 'Protected', url: '/protected'},
         { name: 'Recurse', url: '/recurse/F15B2A/Parent'},
         { name: 'History', url: '/history'},
+        { name: 'Unicorn', url: '/unicorn'},
         { name: 'Not Found', url: '/404'}
     ];
 

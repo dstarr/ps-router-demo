@@ -6,8 +6,8 @@ import PageNotFound from "../components/PageNotFound";
 import Colors from "../components/colors/Colors";
 import NavLinks from "../components/layout/NavLinks";
 
-import ProtectedComponent from "../components/secure/ProtectedComponent";
 import PrivateRoute from "../components/secure/PrivateRoute";
+import ProtectedHome from "../components/secure/ProtectedHome";
 import Login from "../components/secure/Login";
 import Logout from "../components/secure/Logout";
 
@@ -16,6 +16,9 @@ import PersonProfileContainer from "./PersonProfileContainer";
 import AddressForm from "../components/AddressForm";
 import History from "../components/History";
 import RecursiveColorSwatch from "../components/colors/RecursiveColorSwatch";
+import Unicorn from "../components/Unicorn";
+import ProtectedChild1 from "../components/secure/ProtectedChild1";
+import ProtectedChild2 from "../components/secure/ProtectedChild2";
 
 class AppContainer extends React.Component {
 
@@ -38,6 +41,7 @@ class AppContainer extends React.Component {
                     <div className={'rightContentContainer'}>
 
                         <Switch>
+
                             <Route path={'/colors'} component={Colors}/>
                             <Route path={'/history'} component={History}/>
                             <Route path={'/prompt'} component={AddressForm}/>
@@ -48,14 +52,18 @@ class AppContainer extends React.Component {
                             <Route path={'/people'} component={People}/>
 
 
-                            <PrivateRoute path={'/protected'} component={ProtectedComponent}/>
+
                             <Route path={'/login'} component={Login}/>
                             <Route path={'/logout'} component={Logout}/>
+                            <PrivateRoute path={'/protected'} component={ProtectedHome}/>
 
                             <Route path={'/'} component={Home} exact/>
 
                             <Route component={PageNotFound}/>
-                            <Route children={() => ( <PageNotFound text={'You have no idea what you are looking for, do you?'} /> )} />
+
+                            <Route path={'/unicorn'} children={() => {
+                                this.props.match ? <Unicorn /> : <PageNotFound />
+                            }} />
 
                         </Switch>
                     </div>

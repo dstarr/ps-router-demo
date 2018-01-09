@@ -24,7 +24,7 @@ class Login extends React.Component {
     render = () => {
 
         if (this.state.loggedIn) {
-            return <Redirect to={'/protected'}/>;
+            return <Redirect to={'/protected/home'} />;
         }
 
         return (
