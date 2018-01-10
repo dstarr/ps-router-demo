@@ -22,7 +22,6 @@ const Unicorn = ({match}) => {
 
         </div>
     )
-
 };
 
 export default Unicorn;
