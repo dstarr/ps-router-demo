@@ -15,9 +15,9 @@ const Unicorn = ({match}) => {
 
             <Route path={`${match.url}/arg`} children={({match}) => {
 
-                let face = match ? 'right' : 'left';
+                let direction = match ? 'right' : 'left';
 
-                return (<img src={`/assets/unicorn_${face}.png`} width={'400px'}/>)
+                return (<img src={`/assets/unicorn_${direction}.png`} width={'400px'}/>)
             }}/>
 
         </div>

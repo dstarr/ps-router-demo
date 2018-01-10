@@ -54,8 +54,7 @@ const Colors = ({match}) => {
                 <Route path={`${match.url}/child([1-9+])`} exact={true}
                        render={() => <ColorSwatch color='#675BA7' text='Component 3'/>}/>
 
-                <Route path={`${match.url}/child/:color/:text`}
-                       render={() => <SmartColorSwatch/>}/>
+\                <Route path={`${match.url}/child/:color/:text`} component={SmartColorSwatch}/>
 
                 <Route path={`${match.url}/:child`} exact={true}
                        render={() => <ColorSwatch color='#9BC850' text='Component 4'/>}/>
