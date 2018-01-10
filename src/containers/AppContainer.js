@@ -16,9 +16,7 @@ import PersonProfileContainer from "./PersonProfileContainer";
 import AddressForm from "../components/AddressForm";
 import History from "../components/History";
 import RecursiveColorSwatch from "../components/colors/RecursiveColorSwatch";
-import Unicorn from "../components/Unicorn";
-import ProtectedChild1 from "../components/secure/ProtectedChild1";
-import ProtectedChild2 from "../components/secure/ProtectedChild2";
+import Unicorn from "../components/unicorn/Unicorn";
 
 class AppContainer extends React.Component {
 
@@ -42,28 +40,24 @@ class AppContainer extends React.Component {
 
                         <Switch>
 
+                            <Route path={'/'} component={Home} exact={true}/>
                             <Route path={'/colors'} component={Colors}/>
                             <Route path={'/history'} component={History}/>
-                            <Route path={'/prompt'} component={AddressForm}/>
 
-                            <Route path={'/recurse/:color/:text'} component={RecursiveColorSwatch}/>
+                            <Route path={'/prompt'} component={AddressForm}/>
 
                             <Route path={'/people/:id'} component={PersonProfileContainer}/>
                             <Route path={'/people'} component={People}/>
 
+                            <Route path={'/recurse/:color/:text'} component={RecursiveColorSwatch}/>
 
-
+                            <PrivateRoute path={'/protected'} component={ProtectedHome}/>
                             <Route path={'/login'} component={Login}/>
                             <Route path={'/logout'} component={Logout}/>
-                            <PrivateRoute path={'/protected'} component={ProtectedHome}/>
 
-                            <Route path={'/'} component={Home} exact/>
+                            <Route path={'/unicorn'} component={Unicorn}/>
 
                             <Route component={PageNotFound}/>
-
-                            <Route path={'/unicorn'} children={() => {
-                                this.props.match ? <Unicorn /> : <PageNotFound />
-                            }} />
 
                         </Switch>
                     </div>
