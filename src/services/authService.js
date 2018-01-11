@@ -6,9 +6,7 @@ const authService = {
 
     isAuthenticated() {
 
-        let authenticated = cookies.get('auth') === 'true';
-
-        return authenticated;
+        return cookies.get('auth') === 'true';
     },
 
 

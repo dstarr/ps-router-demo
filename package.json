@@ -5,7 +5,8 @@
   "author": "David Starr | elegantcode.com | @elegantcoder",
   "license": "UNLICENSED",
   "scripts": {
-    "watch:test": "mocha -w --compilers js:babel-core/register --recursive ./src/tests/",
+    "watch:test": "mocha -w --require babel-core/register --recursive ./test",
+    "test": "mocha --require babel-core/register --recursive ./test",
     "watch": "webpack --progress --colors --watch",
     "build": "webpack",
     "start": "webpack-dev-server"
