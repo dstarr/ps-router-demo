@@ -21,14 +21,13 @@ class AddressForm extends React.Component {
         return (
 
             <div>
-
                 <Prompt when={this.state.valid !== true}
                         message={'Are you sure you want to leave this page now?'}
                 />
-                <h2>Prompt for Completion</h2>
+                <h1>Prompt for Completion</h1>
                 <Form inline={true}>
                     <div>
-                        <ControlLabel>First Name</ControlLabel>
+                        <ControlLabel>First Name</ControlLabel>{' '}
                         <FormControl
                             type="text"
                             value={this.state.firstName}
@@ -37,7 +36,7 @@ class AddressForm extends React.Component {
                         />
                     </div>
                     <div>
-                        <ControlLabel>Last Name</ControlLabel>
+                        <ControlLabel>Last Name</ControlLabel>{' '}
                         <FormControl
                             type="text"
                             value={this.state.lastName}
@@ -62,8 +61,8 @@ class AddressForm extends React.Component {
             this.setState({
                 valid: true
             });
+            alert(`Your name is ${this.state.firstName} ${this.state.lastName} `)
         }
-
     };
 
     onHandleLastNameChange = (e) => {
@@ -80,4 +79,4 @@ class AddressForm extends React.Component {
 
 }
 
-export default AddressForm
+export default AddressForm;

@@ -40,8 +40,8 @@ class LanguageList extends React.Component {
 
         const letter = this.state.letter;
         const languages = this.props.languages;
-        let knownLanguages = [];
 
+        let knownLanguages = [];
         for (let i = 0; i < languages.length; i++) {
             if (languages[i].item.name.toUpperCase().startsWith(letter)) {
                 knownLanguages.push(languages[i].item);

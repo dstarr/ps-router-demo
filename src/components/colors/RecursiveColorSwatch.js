@@ -11,8 +11,7 @@ const RecursiveColorSwatch = ({match}) => {
         color === undefined ||  text === undefined)
         return null;
 
-
-    let style={
+    const style={
         backgroundColor: color,
         textAlign: 'center',
         padding: 20,

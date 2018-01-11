@@ -1,18 +1,16 @@
 import React from 'react';
 import {Button, Table} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import API from "../../api/api";
+
+let api = new API();
 
 class People extends React.Component {
 
     constructor(props) {
         super(props);
 
-        let people = [
-            { id:1, name: 'David Starr', occupation: 'Technical Learning Director'},
-            { id:2, name: 'Scott Allen', occupation: 'Web Developer'},
-            { id:3, name: 'Matt Milner', occupation: 'Programmer Extraordinaire'},
-            { id:4, name: 'Ben Day', occupation: 'Pluralsight Author & Consultant'}
-        ];
+        let people = api.getAuthors();
 
         this.state = {
             people: people,

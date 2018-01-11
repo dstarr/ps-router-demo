@@ -1,10 +1,9 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Header from "../components/layout/Header";
-import Home from "../components/layout/Home";
+import Home from "../components/Home";
 import PageNotFound from "../components/PageNotFound";
 import Colors from "../components/colors/Colors";
-import NavLinks from "../components/layout/NavLinks";
 
 import PrivateRoute from "../components/secure/PrivateRoute";
 import ProtectedHome from "../components/secure/ProtectedHome";
@@ -17,6 +16,7 @@ import AddressForm from "../components/AddressForm";
 import History from "../components/History";
 import RecursiveColorSwatch from "../components/colors/RecursiveColorSwatch";
 import Unicorn from "../components/unicorn/Unicorn";
+import Sidebar from "../components/layout/Sidebar";
 
 class AppContainer extends React.Component {
 
@@ -32,10 +32,7 @@ class AppContainer extends React.Component {
             <BrowserRouter>
                 <div>
                     <Header/>
-                    <div className={'leftNavContainer'}>
-                        <NavLinks/>
-                    </div>
-
+                    <Sidebar />
                     <div className={'rightContentContainer'}>
 
                         <Switch>

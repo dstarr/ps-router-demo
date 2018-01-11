@@ -12,11 +12,6 @@ const Languages = (props) => {
         );
     });
 
-    const spanStyle = {
-        marginLeft: 5,
-        marginRight: 5
-    };
-
     let letters = [];
     let letterLinks = props.languages.map((lang, index) => {
 
@@ -29,6 +24,11 @@ const Languages = (props) => {
                     </span>);
         }
     });
+
+    const spanStyle = {
+        marginLeft: 5,
+        marginRight: 5
+    };
 
     return (
         <div>

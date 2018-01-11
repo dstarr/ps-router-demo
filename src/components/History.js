@@ -6,7 +6,7 @@ class History extends React.Component {
         super(props);
 
         this.state = {
-            history: props.history
+            history: this.props.history
         };
     }
 

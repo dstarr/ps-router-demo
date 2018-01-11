@@ -13,6 +13,7 @@ class PersonProfileContainer extends React.Component {
     }
 
     componentDidMount = () => {
+
         request
             .get('/assets/languageData.json')
             .end((err, res) => {
@@ -32,7 +33,7 @@ class PersonProfileContainer extends React.Component {
     render = () => {
 
         return (
-            <PersonProfile languages={this.state.languages} />
+            <PersonProfile languages={this.state.languages}/>
         );
     }
 }

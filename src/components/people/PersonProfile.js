@@ -2,14 +2,20 @@ import React from 'react';
 import {Link, Route, withRouter} from "react-router-dom";
 import PropTypes from 'prop-types';
 import LanguageList from "./LanguageList";
+import querystring from 'query-string';
 
 const PersonProfile = (props) => {
 
-    const query = new URLSearchParams(props.location.search);
+    // the following line of code doesn't work with all browsers
+    // const query = new URLSearchParams(props.location.search);
+    // const name = query.get('name');
+    // const occupation = query.get('occupation');
 
-    // When the URL is /the-path?some-key=a-value ...
-    const name = query.get('name');
-    const occupation = query.get('occupation');
+    // so we use this package instead query-string
+    const qsValues = querystring.parse(props.location.search);
+    const name = qsValues.name;
+    const occupation = qsValues.occupation;
+
 
     const spanStyle = {
         marginLeft: 5,
@@ -25,8 +31,7 @@ const PersonProfile = (props) => {
             letters.push(letter);
 
             return (<span style={spanStyle} key={index}>
-                        <Link
-                            to={props.match.url + '/' + letter + '?name=' + name + '&occupation=' + occupation}>{letter}</Link>
+                        <Link to={props.match.url + '/' + letter + '?name=' + name + '&occupation=' + occupation}>{letter}</Link>
                     </span>);
         }
     });
