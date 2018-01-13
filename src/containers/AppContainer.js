@@ -13,10 +13,13 @@ import Logout from "../components/secure/Logout";
 import People from "../components/people/People";
 import PersonProfileContainer from "./PersonProfileContainer";
 import AddressForm from "../components/AddressForm";
-import History from "../components/History";
+import Location from "../components/redirect/Location";
+import LocationReporter from "../components/redirect/LocationReporter";
+
 import RecursiveColorSwatch from "../components/colors/RecursiveColorSwatch";
 import Unicorn from "../components/unicorn/Unicorn";
 import Sidebar from "../components/layout/Sidebar";
+import FancyColorSwatch from "../components/testing/Testing";
 
 class AppContainer extends React.Component {
 
@@ -39,7 +42,10 @@ class AppContainer extends React.Component {
 
                             <Route path={'/'} component={Home} exact={true}/>
                             <Route path={'/colors'} component={Colors}/>
-                            <Route path={'/history'} component={History}/>
+                            <Route path={'/testing'} component={FancyColorSwatch}/>
+
+                            <Route path={'/location/reporter'} component={LocationReporter}/>
+                            <Route path={'/location'} component={Location} />
 
                             <Route path={'/prompt'} component={AddressForm}/>
 
