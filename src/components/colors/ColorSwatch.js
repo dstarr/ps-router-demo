@@ -22,7 +22,7 @@ const ColorSwatch = (props) => {
 
 };
 
-ColorSwatch.PropTypes = {
+ColorSwatch.propTypes = {
     color: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired
 };

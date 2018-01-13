@@ -30,18 +30,15 @@ describe('<Unicorn />', () => {
 
 
         it('has 2 Links', () => {
-
-
-
             assert.equal(wrapper.find(Link).length, 2);
-
         });
 
         it('has 1 Route', () => {
-
-
             assert.equal(wrapper.find(Route).length, 1);
+        });
 
+        it('Route path is /unicorn/arg', () => {
+            assert.equal(wrapper.find(Route).path, '/unicorn/arg');
         });
     });
 });

@@ -41,7 +41,7 @@ class Places extends React.Component {
             </div>
 
         </div>;
-    }
+    };
 
     onNewPlaceChange = (e) => {
         this.setState({

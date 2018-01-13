@@ -52,7 +52,7 @@ class LanguageList extends React.Component {
     };
 }
 
-LanguageList.PropTypes = {
+LanguageList.propTypes = {
     languages: PropTypes.array.isRequired
 };
 

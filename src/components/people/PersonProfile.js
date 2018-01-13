@@ -74,7 +74,7 @@ const PersonProfile = (props) => {
     );
 };
 
-PersonProfile.PropTypes = {
+PersonProfile.propTypes = {
     languages: PropTypes.array.isRequired
 };
 

@@ -22,7 +22,7 @@ const Lorem = ({title, match}) => {
     );
 };
 
-Lorem.PropTypes = {
+Lorem.propTypes = {
     title: PropTypes.string.isRequired
 };
 

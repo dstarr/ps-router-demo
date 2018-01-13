@@ -8,7 +8,7 @@ const PageNotFound = (props) => {
         fontWeight: 'bold'
     };
 
-    let message = 'Page not found'
+    let message = 'Page not found';
     if(props.text)
         message = props.text;
 
@@ -21,7 +21,7 @@ const PageNotFound = (props) => {
     );
 };
 
-PageNotFound.PropTypes = {
+PageNotFound.propTypes = {
     text: PropTypes.string
 };
 

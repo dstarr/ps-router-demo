@@ -43,7 +43,7 @@ const Languages = (props) => {
     );
 };
 
-Languages.PropTypes = {
+Languages.propTypes = {
     languages: PropTypes.array.isRequired
 };
 
