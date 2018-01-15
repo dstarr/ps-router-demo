@@ -1,25 +1,25 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
-import Header from "../components/layout/Header";
-import Home from "../components/Home";
-import PageNotFound from "../components/PageNotFound";
-import Colors from "../components/colors/Colors";
+import Header from "./components/layout/Header";
+import Home from "./components/Home";
+import PageNotFound from "./components/PageNotFound";
+import Colors from "./components/colors/Colors";
 
-import PrivateRoute from "../components/secure/PrivateRoute";
-import ProtectedHome from "../components/secure/ProtectedHome";
-import Login from "../components/secure/Login";
-import Logout from "../components/secure/Logout";
+import PrivateRoute from "./components/secure/PrivateRoute";
+import ProtectedHome from "./components/secure/ProtectedHome";
+import Login from "./components/secure/Login";
+import Logout from "./components/secure/Logout";
 
-import People from "../components/people/People";
-import PersonProfileContainer from "./PersonProfileContainer";
-import AddressForm from "../components/AddressForm";
-import Location from "../components/redirect/Location";
-import LocationReporter from "../components/redirect/LocationReporter";
+import People from "./components/people/People";
+import PersonProfileContainer from "./containers/PersonProfileContainer";
+import AddressForm from "./components/AddressForm";
+import Location from "./components/redirect/Location";
+import LocationReporter from "./components/redirect/LocationReporter";
 
-import RecursiveColorSwatch from "../components/colors/RecursiveColorSwatch";
-import Unicorn from "../components/unicorn/Unicorn";
-import Sidebar from "../components/layout/Sidebar";
-import FancyColorSwatch from "../components/testing/Testing";
+import RecursiveColorSwatch from "./components/colors/RecursiveColorSwatch";
+import Unicorn from "./components/unicorn/Unicorn";
+import Sidebar from "./components/layout/Sidebar";
+import FancyColorSwatch from "./components/testing/Testing";
 
 const App = () => {
 

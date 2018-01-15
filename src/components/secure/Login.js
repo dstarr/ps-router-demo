@@ -13,14 +13,6 @@ class Login extends React.Component {
         };
     }
 
-    login = () => {
-        authService.signIn(() => {
-            this.setState({
-                loggedIn: authService.isAuthenticated()
-            })
-        })
-    };
-
     render = () => {
 
         if (this.state.loggedIn) {
@@ -35,7 +27,17 @@ class Login extends React.Component {
                 <Button className='btn btn-primary' onClick={this.login}>Sign in</Button>
             </div>
         );
-    }
+    };
+
+    login = () => {
+        authService.signIn(() => {
+            this.setState({
+                loggedIn: authService.isAuthenticated()
+            })
+        })
+    };
+
+
 }
 
 export default Login

@@ -4,7 +4,7 @@ import 'babel-polyfill';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../assets/index.css'
 
-import App from './containers/App'
+import App from './App'
 
 const node1 = document.getElementById('app');
 
