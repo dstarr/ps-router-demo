@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Header from "./components/layout/Header";
 import Home from "./components/Home";
@@ -29,7 +29,7 @@ const App = () => {
     // - build NavLinks when putting in the 3rd link
 
     return (
-        <BrowserRouter>
+        <Router>
             <div>
                 <Header/>
                 <Sidebar/>

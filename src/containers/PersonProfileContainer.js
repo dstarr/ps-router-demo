@@ -17,7 +17,7 @@ class PersonProfileContainer extends React.Component {
         request
             .get('/assets/languageData.json')
             .end((err, res) => {
-                if(err) {
+                if (err) {
                     console.log('ERROR CODE: ' + err.response);
                     return;
                 }
@@ -33,7 +33,9 @@ class PersonProfileContainer extends React.Component {
     render = () => {
 
         return (
-            <PersonProfile languages={this.state.languages}/>
+            <section>
+                <PersonProfile languages={this.state.languages}/>
+            </section>
         );
     }
 }

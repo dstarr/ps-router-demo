@@ -62,13 +62,15 @@ const PersonProfile = (props) => {
                 Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Lacus luctus accumsan tortor
                 posuere.</p>
 
-            <h3>Programming Languages</h3>
+            <section>
+                <h3>Programming Languages</h3>
 
-            {letterLinks}
+                {letterLinks}
 
-            <Route path={`${props.match.url}/:letter`} render={() => {
-                return <LanguageList languages={props.languages}/>
-            }}/>
+                <Route path={`${props.match.url}/:letter`} render={() => {
+                    return <LanguageList languages={props.languages}/>
+                }}/>
+            </section>
 
         </div>
     );
