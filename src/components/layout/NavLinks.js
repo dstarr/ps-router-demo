@@ -13,6 +13,7 @@ const NavLinks = () => {
         { name: 'Protected', url: '/protected'},
         { name: 'Recurse', url: '/recurse/F15B2A/Parent'},
         { name: 'Unicorn', url: '/unicorn'},
+        { name: 'Logging Link', url: '/logging'},
         { name: 'Not Found', url: '/404'},
         { name: 'Testing', url: '/testing'}
     ];

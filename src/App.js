@@ -1,10 +1,12 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
+
 import Header from "./components/layout/Header";
 import Home from "./components/Home";
 import PageNotFound from "./components/PageNotFound";
 import Colors from "./components/colors/Colors";
 
+// security imports
 import PrivateRoute from "./components/secure/PrivateRoute";
 import ProtectedHome from "./components/secure/ProtectedHome";
 import Login from "./components/secure/Login";
@@ -19,7 +21,7 @@ import LocationReporter from "./components/redirect/LocationReporter";
 import RecursiveColorSwatch from "./components/colors/RecursiveColorSwatch";
 import Unicorn from "./components/unicorn/Unicorn";
 import Sidebar from "./components/layout/Sidebar";
-import FancyColorSwatch from "./components/testing/Testing";
+import Logging from "./components/customLink/Logging";
 
 const App = () => {
 
@@ -37,7 +39,7 @@ const App = () => {
 
                         <Route path={'/'} component={Home} exact={true}/>
                         <Route path={'/colors'} component={Colors}/>
-                        <Route path={'/testing'} component={FancyColorSwatch}/>
+                        <Route path={'/logging'} component={Logging}/>
 
                         <Route path={'/location/reporter'} component={LocationReporter}/>
                         <Route path={'/location'} component={Location}/>

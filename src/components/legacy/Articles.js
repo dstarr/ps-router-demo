@@ -1,5 +1,5 @@
 import React from 'react';
-import Lorem from "./Lorem";
+import Lorem from "../testing/Lorem";
 import {NavLink, Route, Switch} from "react-router-dom";
 
 const Articles = ({match}) => {

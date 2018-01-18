@@ -1,14 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {withRouter} from "react-router-dom";
 
-const Lorem = ({title, match}) => {
-
-    if(!title)
-        title = 'Lorem Home';
+const Lorem = ({match}) => {
 
     return (
         <div>
-            <h1>{title}</h1>
+            <h3>{match.params.eid}</h3>
             <p><strong>Requested Path:</strong> {match.path}</p>
             <p>
                 Lorem ipsum dolor sit amet, sit dicit oblique blandit eu, vis impetus deserunt te. Mutat simul vivendum te qui, no aperiri principes mel. Nam unum accusam contentiones ex, tempor euismod ei est, at pri omnis vocent denique. Et lorem sadipscing quo, per doming argumentum complectitur ad.
@@ -22,8 +20,4 @@ const Lorem = ({title, match}) => {
     );
 };
 
-Lorem.propTypes = {
-    title: PropTypes.string.isRequired
-};
-
-export default Lorem;
+export default withRouter(Lorem);
