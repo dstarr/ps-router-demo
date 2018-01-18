@@ -12,9 +12,9 @@ class LanguageList extends React.Component {
         };
     }
 
-    componentWillReceiveProps(nextProps) {
+    componentDidMount = () => {
         this.setState({
-            letter: nextProps.match.params.letter
+            letter: this.props.match.params.letter
         })
     }
 

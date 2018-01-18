@@ -16,12 +16,12 @@ const PersonProfile = (props) => {
     const name = qsValues.name;
     const occupation = qsValues.occupation;
 
-
     const spanStyle = {
-        marginLeft: 5,
-        marginRight: 5
-    };
+        marginRight: 10,
+        fontWeight: 'bold',
+        fontSize: 20
 
+    };
 
     let letters = [];
     let letterLinks = props.languages.map((lang, index) => {
@@ -31,7 +31,7 @@ const PersonProfile = (props) => {
             letters.push(letter);
 
             return (<span style={spanStyle} key={index}>
-                        <Link to={props.match.url + '/' + letter + '?name=' + name + '&occupation=' + occupation}>{letter}</Link>
+                        <Link to={`${props.match.url}/${letter}?name=${name}&occupation=${occupation}`}>{letter}</Link>
                     </span>);
         }
     });
