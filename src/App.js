@@ -62,7 +62,7 @@ const App = () => {
                     </Switch>
                 </div>
             </div>
-        </BrowserRouter>
+        </Router>
     );
 };
 
