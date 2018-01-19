@@ -8,19 +8,18 @@ a.navLink {
     color: #ffffff;
 }
 
+a, a:active, a:visited, a:hover {
+    text-decoration: none;
+
+}
+
 .leftNavContainer {
     padding: 20px;
     position: absolute;
-    width: 200px;
+    width: 180px;
     background-color: #F15B2A;
     display: block;
     height: 100%;
-}
-
-.rightContentContainer {
-    margin-left: 210px;
-    width: 80%;
-    display: contents;
 }
 
 .leftNavNested {
@@ -30,37 +29,42 @@ a.navLink {
     background-color: #000000;
 }
 
-.rightNestedContentContainer {
-    margin-left: 210px;
+.rightContentContainer {
+    margin-left: 200px;
     width: 80%;
-}
-
-a, a:active, a:visited, a:hover {
-    text-decoration: none;
-
+    display: contents;
 }
 
 li.nav {
     list-style-type: none;
     margin-left: -30px;
-    padding: 0px;
 }
 
 .header {
     background-color: #000000;
     height: 90px;
-
 }
 
-.headerLogo {
-    padding-top: 12px;
+.header-logo {
+    margin-top: -25px;
     margin-left: 30px;
     width: 75px;
+    display: inline-block;
+    text-align: left;
+}
+
+.header-text {
+    padding-top: 20px;
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 400px;
 }
 
 .unicorn {
     padding-left: 0px;
-    margin-left: 0px;
+    margin-left: 12px;
     width: 80px;
     margin-top: 20px;
 }
