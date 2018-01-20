@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Route, Switch} from "react-router-dom";
+import {Link, Route } from "react-router-dom";
 import ProtectedChildHome from "./ProtectedChildHome";
 import ProtectedChild1 from "./ProtectedChild1";
 import ProtectedChild2 from "./ProtectedChild2";
@@ -26,7 +26,7 @@ const ProtectedHome = ({match}) => {
 
                 <Route path={`${match.url}/1`} component={ProtectedChild1}/>
                 <Route path={`${match.url}/2`} component={ProtectedChild2}/>
-                <Route exact path={`${match.url}`} component={ProtectedChildHome}/>
+                <Route path={`${match.url}`} component={ProtectedChildHome} exact/>
 
 
 

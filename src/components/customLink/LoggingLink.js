@@ -14,7 +14,7 @@ class LoggingLink extends React.Component {
         let urlParts = this.props.to.split('/');
         const eid = urlParts[urlParts.length-1];
 
-        alert('Logging: ' + eid);
+        alert('Clicking the Link is Logging: ' + eid);
     };
 
 

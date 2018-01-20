@@ -1,9 +1,9 @@
 import React from 'react';
 import {Button, Table} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import API from "../../api/api";
+import PersonAPI from "../../services/personService";
 
-let api = new API();
+let api = new PersonAPI();
 
 class People extends React.Component {
 
