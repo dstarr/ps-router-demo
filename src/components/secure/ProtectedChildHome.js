@@ -1,15 +1,11 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-const ProtectedComponent2 = () => {
-
-    const leftDivStyle = {
-        display: 'inline'
-    };
+const ProtectedChildHome = () => {
 
     return (
 
-        <div style={leftDivStyle}>
+        <div>
             <h2>Home Child Component</h2>
 
             <p>
@@ -22,9 +18,7 @@ const ProtectedComponent2 = () => {
             </p>
 
         </div>
-
-
     );
 };
 
-export default ProtectedComponent2;
+export default ProtectedChildHome;

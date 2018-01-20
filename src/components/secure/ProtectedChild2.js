@@ -3,13 +3,9 @@ import {Link} from "react-router-dom";
 
 const ProtectedComponent2 = () => {
 
-    const leftDivStyle = {
-        display: 'inline'
-    };
-
     return (
 
-        <div style={leftDivStyle}>
+        <div>
             <h2>Protected Component 2</h2>
 
             <p>
