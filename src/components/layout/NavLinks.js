@@ -21,7 +21,8 @@ const NavLinks = () => {
     let linksComponents = links.map((link, index) => {
         return (
             <li key={index} className={'nav'}>
-                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={link.url}>{link.name}</NavLink>
+                <NavLink className={'navLink'} activeClassName={'activeNavLink'} to={link.url}
+                         exact>{link.name}</NavLink>
             </li>
         );
     });

@@ -15,13 +15,13 @@ const ProtectedHome = ({match}) => {
         <div style={leftDivStyle}>
             <h1>Protected Page</h1>
 
-            <header>
-                <Link to={`${match.url}`}>Child Main</Link>
+            <h4>
+                <Link to={`${match.url}`}>Home Child</Link>
                 {' | '}
                 <Link to={`${match.url}/1`}>Child 1</Link>
                 {' | '}
                 <Link to={`${match.url}/2`}>Child 2</Link>
-            </header>
+            </h4>
 
             <Switch>
                 <Route path={`${match.url}/1`} component={ProtectedChild1}/>

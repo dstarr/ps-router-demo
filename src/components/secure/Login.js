@@ -9,14 +9,18 @@ class Login extends React.Component {
         super(props);
 
         this.state = {
-            loggedIn: authService.isAuthenticated()
+            loggedIn: authService.isAuthenticated(),
+            goToTarget: true
         };
     }
 
     render = () => {
 
+        const { target } = this.props.location.state || {target: { pathname: '/protected'}};
+        console.log(this.props);
+
         if (this.state.loggedIn) {
-            return <Redirect to={'/protected/home'} />;
+            return <Redirect to={target}/>;
         }
 
         return (
@@ -36,8 +40,6 @@ class Login extends React.Component {
             })
         })
     };
-
-
 }
 
 export default Login
