@@ -3,6 +3,8 @@ import LoggingLink from "./LoggingLink";
 import {Route, withRouter} from "react-router-dom";
 import Lorem from "./Lorem";
 import LoggingRoute from "./LoggingRoute";
+import Home from "./Home";
+
 
 const Logging = (props) => {
 
@@ -16,7 +18,7 @@ const Logging = (props) => {
             </h4>
 
             <LoggingRoute path={`${props.match.url}/lorem/:eid`} component={Lorem} />
-
+            <Route path={props.match.url} component={Home} exact/>
         </div>
     );
 

@@ -17,7 +17,6 @@ class Login extends React.Component {
     render = () => {
 
         const {target} = this.props.location.state || {target: {pathname: '/protected'}};
-        console.log(this.props);
 
         if (this.state.loggedIn) {
             return <Redirect to={target}/>;
@@ -29,12 +28,12 @@ class Login extends React.Component {
 
                 <Form horizontal={true}>
                     <FormGroup>
+
                         <ControlLabel>Email Address</ControlLabel>
                         <FormControl
                             type="string"
                             placeholder="Email"
                             size={{length: 40}}
-
                             onChange={this.onHandleLastNameChange}
                         />
 
@@ -46,12 +45,11 @@ class Login extends React.Component {
                             onChange={this.onHandleLastNameChange}
                         />
 
-
                         <Button className='btn btn-primary' onClick={this.login}>Sign in</Button>
                     </FormGroup>
                 </Form>
             </div>
-    );
+        );
     };
 
     login = () => {
@@ -61,6 +59,6 @@ class Login extends React.Component {
             })
         })
     };
-    }
+}
 
-    export default Login
+export default Login;
