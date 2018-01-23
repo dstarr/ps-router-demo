@@ -15,7 +15,7 @@ const Colors = ({match}) => {
 
     // 1. Show ColorSwatch and the props it wants
     // 2. Show how to render using home and the home route
-    // - Use the Home Page "Welcome to" component
+    // - Use the Home Page "Welcome to" component\
     //
     // 1. add links one at a time, hitting a new route with each link
     // 2. Add routes a at a time to meet the requirements of the links
