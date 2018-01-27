@@ -1,5 +1,5 @@
 const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 
@@ -43,10 +43,10 @@ module.exports = {
     },
 
     plugins: [
-        //new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin()
     ],
 
-    devServer: {
-        historyApiFallback: true
-    }
+    // devServer: {
+    //     historyApiFallback: true
+    // }
 };
