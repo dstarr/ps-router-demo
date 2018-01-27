@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import Header from "./components/layout/Header";
 import Sidebar from "./components/layout/Sidebar";
+import Home from './components/Home';
 
 const App = () => {
 
@@ -13,7 +14,12 @@ const App = () => {
                 <Sidebar/>
                 <div className={'rightContentContainer'}>
 
-                    <h1>Hello RR4</h1>
+                    <Switch>
+                        <Route path='/' component={Home}/>
+                        <Route path='/' component={Home}/>
+                        <Route path='/' component={Home}/>
+                        <Route path='/' component={Home}/>
+                    </Switch>
 
                 </div>
             </div>
