@@ -6,6 +6,7 @@ import Sidebar from "./components/layout/Sidebar";
 import Home from './components/Home';
 import PropViewer from './components/PropViewer';
 import PageNotFound from './components/PageNotFound';
+import ColorSwatch from './components/colors/ColorSwatch';
 
 const App = () => {
 
@@ -18,8 +19,12 @@ const App = () => {
 
                     <Switch>
                         <Route path='/' component={Home} exact/>
-                        <Route path='/propview' component={PropViewer} />
-                        <Route component={PageNotFound} />
+                        <Route path='/propview' component={PropViewer}/>
+                        <Route path='/color' render={() => {
+                            return <ColorSwatch text='Red' color='#ff0000'/>
+                        }}/>
+
+                        <Route component={PageNotFound}/>
                     </Switch>
 
                 </div>
