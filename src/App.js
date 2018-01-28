@@ -5,6 +5,7 @@ import Header from "./components/layout/Header";
 import Sidebar from "./components/layout/Sidebar";
 import Home from './components/Home';
 import PropViewer from './components/PropViewer';
+import PageNotFound from './components/PageNotFound';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
                     <Switch>
                         <Route path='/' component={Home} exact/>
                         <Route path='/propview' component={PropViewer} />
+                        <Route component={PageNotFound} />
                     </Switch>
 
                 </div>
