@@ -16,8 +16,6 @@ const App = () => {
 
                     <Switch>
                         <Route path='/' component={Home} exact/>
-                        <Route path='/hello' component={Hello}/>
-
                     </Switch>
 
                 </div>
@@ -25,7 +23,5 @@ const App = () => {
         </Router>
     );
 };
-
-const Hello = () => <h1>Hello</h1>;
 
 export default App;
