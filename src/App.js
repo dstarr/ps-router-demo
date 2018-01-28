@@ -15,7 +15,9 @@ const App = () => {
                 <div className={'rightContentContainer'}>
 
                     <Switch>
-                        <Route path='/' component={Home}/>
+                        <Route path='/' component={Home} exact/>
+                        <Route path='/hello' component={Hello}/>
+
                     </Switch>
 
                 </div>
@@ -24,5 +26,6 @@ const App = () => {
     );
 };
 
+const Hello = () => <h1>Hello</h1>;
 
 export default App;
