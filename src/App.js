@@ -7,6 +7,7 @@ import Home from './components/Home';
 import PropViewer from './components/PropViewer';
 import PageNotFound from './components/PageNotFound';
 import ColorSwatch from './components/colors/ColorSwatch';
+import NameForm from './components/prompt/NameForm';
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
                         <Route path='/color' render={() => {
                             return <ColorSwatch text='Red' color='#ff0000'/>
                         }}/>
+                        <Route path='/prompt' component={NameForm}/>
 
                         <Route component={PageNotFound}/>
                     </Switch>
