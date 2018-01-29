@@ -9,6 +9,9 @@ import PageNotFound from './components/PageNotFound';
 import ColorSwatch from './components/colors/ColorSwatch';
 import NameForm from './components/prompt/NameForm';
 import LoggingHome from './components/logging/LoggingHome';
+import ProtectedHome from './components/secure/ProtectedHome';
+import Login from './components/secure/Login';
+import Logout from './components/secure/Logout';
 
 const App = () => {
 
@@ -28,6 +31,10 @@ const App = () => {
                         <Route path='/prompt' component={NameForm}/>
                         <Route path='/logging' component={LoggingHome}/>
 
+                        // secure routes
+                        <Route path={'/protected'} component={ProtectedHome}/>
+
+                        /// page not found route
                         <Route component={PageNotFound}/>
                     </Switch>
 
