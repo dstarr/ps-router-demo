@@ -7,6 +7,7 @@ const Sidebar = () => {
         {name: 'Home', url: '/'},
         {name: 'Prop Viewer', url: '/propview'},
         {name: 'Color', url: '/color'},
+        {name: 'Smart Color', url: '/color/Green/#00ff00'},
         {name: 'Prompt', url: '/prompt'},
         {name: 'Logging', url: '/logging'},
         {name: 'Protected', url: '/protected'},
