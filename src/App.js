@@ -12,6 +12,7 @@ import LoggingHome from './components/logging/LoggingHome';
 import ProtectedHome from './components/secure/ProtectedHome';
 import Login from './components/secure/Login';
 import Logout from './components/secure/Logout';
+import ProtectedRoute from './components/secure/ProtectedRoute';
 
 const App = () => {
 
@@ -32,7 +33,9 @@ const App = () => {
                         <Route path='/logging' component={LoggingHome}/>
 
                         // secure routes
-                        <Route path={'/protected'} component={ProtectedHome}/>
+                        <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
+                        <Route path={'/login'} component={Login}/>
+                        <Route path={'/logout'} component={Logout}/>
 
                         /// page not found route
                         <Route component={PageNotFound}/>

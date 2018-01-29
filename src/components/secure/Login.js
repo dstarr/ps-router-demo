@@ -9,19 +9,17 @@ class Login extends React.Component {
         super(props);
 
         this.state = {
-            loggedIn: authService.isAuthenticated(),
-            goToTarget: true
+            loggedIn: authService.isAuthenticated()
         };
     }
 
     render = () => {
 
-        // start with
-        // const {target} = this.props.location.state || {target: {pathname: '/protected'}};
+        const {target} = this.props.location.state || {target: {pathname: '/protected'}};
 
-        // if (this.state.loggedIn) {
-        //     return <Redirect to={target}/>;
-        // }
+        if (this.state.loggedIn) {
+            return <Redirect to={target}/>;
+        }
 
         return (
             <div style={{width: 200}}>
