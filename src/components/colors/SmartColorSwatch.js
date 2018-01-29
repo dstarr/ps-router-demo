@@ -10,7 +10,6 @@ const SmartColorSwatch = ({match}) => {
         borderColor: '#000000',
         borderStyle: 'solid',
         margin:15
-
     };
 
     return (
