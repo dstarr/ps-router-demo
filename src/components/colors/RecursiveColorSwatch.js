@@ -31,8 +31,6 @@ const RecursiveColorSwatch = ({match}) => {
                 <Link to={`${match.url}`}>Close Child</Link>
             </h4>
 
-            <Route path={`${match.url}/:color/:text`} component={RecursiveColorSwatch}/>
-
         </div>
     );
 
