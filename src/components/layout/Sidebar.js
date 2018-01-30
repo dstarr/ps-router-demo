@@ -8,7 +8,7 @@ const Sidebar = () => {
         {name: 'Prop Viewer', url: '/propview'},
         {name: 'Color', url: '/color'},
         {name: 'Smart Color', url: '/color/Green/#00ff00'},
-        {name: 'Smart Color', url: '/colors/Yellow/FFEC40'},
+        {name: 'Recursive', url: '/colors/Yellow/FFEC40'},
         {name: 'Prompt', url: '/prompt'},
         {name: 'Logging', url: '/logging'},
         {name: 'Protected', url: '/protected'},
