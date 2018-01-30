@@ -11,6 +11,7 @@ const Sidebar = () => {
         {name: 'Prompt', url: '/prompt'},
         {name: 'Logging', url: '/logging'},
         {name: 'Protected', url: '/protected'},
+        {name: 'People', url: '/people'},
         {name: '404 Error', url: '/404Error'},
     ];
 
