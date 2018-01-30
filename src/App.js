@@ -36,8 +36,6 @@ const App = () => {
                         <Route path='/logging' component={LoggingHome}/>
 
                         // people
-                        <Route path={'/people/:id'} component={PersonProfileContainer}/>
-                        <Route path={'/people'} component={People}/>
 
                         // secure routes
                         <ProtectedRoute path={'/protected'} component={ProtectedHome}/>

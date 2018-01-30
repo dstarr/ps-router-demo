@@ -30,7 +30,11 @@ const PersonProfile = (props) => {
         if (!letters.includes(letter)) {
             letters.push(letter);
 
-            const linkUri = `${props.match.url}/${letter}?name=${name}&occupation=${occupation}`;
+            //
+            // const linkUri = `${props.match.url}/languages/${letter}?name=${name}&occupation=${occupation}`;
+            //
+
+            const linkUri = `${props.match.url}/languages/${letter}`;
 
             return (<span style={spanStyle} key={index}>
                         <Link to={linkUri}>{letter}</Link>
@@ -69,9 +73,7 @@ const PersonProfile = (props) => {
 
                 {letterLinks}
 
-                <Route path={`${props.match.url}/:letter`} render={() => {
-                    return <LanguageList languages={props.languages}/>
-                }}/>
+
             </section>
 
         </div>

@@ -23,7 +23,11 @@ class People extends React.Component {
 
         let people = this.state.people.map((person, index) => {
 
-            const linkUrl = `/people/${person.id}?name=${person.name}&occupation=${person.occupation}`;
+            //
+            // const linkUrl = `/people/${person.id}?name=${person.name}&occupation=${person.occupation}`;
+            //
+
+            const linkUrl = `/people/${person.id}`;
 
             return (
                 <tr key={index}>
