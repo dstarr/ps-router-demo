@@ -15,6 +15,7 @@ import Logout from './components/secure/Logout';
 import ProtectedRoute from './components/secure/ProtectedRoute';
 import PersonProfileContainer from './containers/PersonProfileContainer';
 import People from './components/people/People';
+import RecursiveColorSwatch from './components/colors/RecursiveColorSwatch';
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
                     <Switch>
                         <Route path='/' component={Home} exact/>
                         <Route path='/propview' component={PropViewer}/>
+                        <Route path='/colors/:color/:text' component={RecursiveColorSwatch}/>
                         <Route path='/color' render={() => {
                             return <ColorSwatch text='Red' color='#ff0000'/>
                         }}/>
