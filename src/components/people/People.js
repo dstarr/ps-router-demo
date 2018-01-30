@@ -21,18 +21,23 @@ class People extends React.Component {
 
     render = () => {
 
-        let people = this.state.people.map((person, index) => (
-            <tr key={index}>
-                <td>{person.id}</td>
-                <td>
-                    <Link to={`/people/${person.id}?name=${person.name}&occupation=${person.occupation}`}>{person.name}</Link>
-                </td>
-                <td>{person.occupation}</td>
-                <td>
-                    <Button onClick={(e) => this.onDeletePerson(e, person.id)}>Delete</Button>
-                </td>
-            </tr>
-        ));
+        let people = this.state.people.map((person, index) => {
+
+            const linkUrl = `/people/${person.id}?name=${person.name}&occupation=${person.occupation}`;
+
+            return (
+                <tr key={index}>
+                    <td>{person.id}</td>
+                    <td>
+                        <Link to={linkUrl}>{person.name}</Link>
+                    </td>
+                    <td>{person.occupation}</td>
+                    <td>
+                        <Button onClick={(e) => this.onDeletePerson(e, person.id)}>Delete</Button>
+                    </td>
+                </tr>
+            )
+        });
 
         return (
             <div>
@@ -53,7 +58,8 @@ class People extends React.Component {
                 <div>
                     <input onChange={this.onNameChange} placeholder={'Name'} value={this.state.newName}/>
                     {' '}
-                    <input onChange={this.onOccupationChange} placeholder={'Occupation'} value={this.state.newOccupation}/>
+                    <input onChange={this.onOccupationChange} placeholder={'Occupation'}
+                           value={this.state.newOccupation}/>
                     {' '}
                     <Button onClick={this.onAddNewPerson}>Add</Button>
                 </div>
@@ -63,7 +69,7 @@ class People extends React.Component {
 
     onAddNewPerson = () => {
 
-        if( this.state.newName === '' ||
+        if (this.state.newName === '' ||
             this.state.newOccupation === '') {
             return;
         }

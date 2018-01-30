@@ -8,20 +8,19 @@ const PersonProfile = (props) => {
 
     // the following line of code doesn't work with all browsers
     // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams#Browser_compatibility
-    // const query = new URLSearchParams(props.location.search);
-    // const name = query.get('name');
-    // const occupation = query.get('occupation');
+    const query = new URLSearchParams(props.location.search);
+    const name = query.get('name');
+    const occupation = query.get('occupation');
 
     // so we use this package instead query-string
-    const qsValues = querystring.parse(props.location.search);
-    const name = qsValues.name;
-    const occupation = qsValues.occupation;
+    // const qsValues = querystring.parse(props.location.search);
+    // const name = qsValues.name;
+    // const occupation = qsValues.occupation;
 
     const spanStyle = {
         marginRight: 10,
         fontWeight: 'bold',
         fontSize: 20
-
     };
 
     let letters = [];
@@ -31,8 +30,10 @@ const PersonProfile = (props) => {
         if (!letters.includes(letter)) {
             letters.push(letter);
 
+            const linkUri = `${props.match.url}/${letter}?name=${name}&occupation=${occupation}`;
+
             return (<span style={spanStyle} key={index}>
-                        <Link to={`${props.match.url}/${letter}?name=${name}&occupation=${occupation}`}>{letter}</Link>
+                        <Link to={linkUri}>{letter}</Link>
                     </span>);
         }
     });
