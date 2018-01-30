@@ -3,6 +3,7 @@ import {Link, Route, withRouter} from "react-router-dom";
 import PropTypes from 'prop-types';
 import LanguageList from "./LanguageList";
 import querystring from 'query-string';
+import LetterList from './LetterList';
 
 const PersonProfile = (props) => {
 
@@ -16,27 +17,6 @@ const PersonProfile = (props) => {
     // const qsValues = querystring.parse(props.location.search);
     // const name = qsValues.name;
     // const occupation = qsValues.occupation;
-
-    const spanStyle = {
-        marginRight: 10,
-        fontWeight: 'bold',
-        fontSize: 20
-    };
-
-    let letters = [];
-    let letterLinks = props.languages.map((lang, index) => {
-
-        let letter = lang.item.name.substring(0, 1).toUpperCase();
-        if (!letters.includes(letter)) {
-            letters.push(letter);
-
-            const linkUri = `${props.match.url}/${letter}?name=${name}&occupation=${occupation}`;
-
-            return (<span style={spanStyle} key={index}>
-                        <Link to={linkUri}>{letter}</Link>
-                    </span>);
-        }
-    });
 
     return (
         <div>
@@ -67,9 +47,9 @@ const PersonProfile = (props) => {
             <section>
                 <h3>Programming Languages</h3>
 
-                {letterLinks}
+                <LetterList languages={props.languages} name={name} occupation={occupation}/>
 
-                <Route path={`${props.match.url}/:letter`} render={() => {
+                <Route path={`${props.match.url}/languages/:letter`} render={() => {
                     return <LanguageList languages={props.languages}/>
                 }}/>
             </section>
