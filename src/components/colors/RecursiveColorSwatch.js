@@ -7,17 +7,17 @@ const RecursiveColorSwatch = ({match}) => {
     const text = match.params.text;
 
     // stop the recursion
-    if( color === '' ||  text === '' ||
-        color === undefined ||  text === undefined)
+    if (color === '' || text === '' ||
+        color === undefined || text === undefined)
         return null;
 
-    const style={
+    const style = {
         backgroundColor: color,
         textAlign: 'center',
         padding: 20,
         borderColor: '#000000',
         borderStyle: 'solid',
-        margin:15
+        margin: 15
 
     };
 
