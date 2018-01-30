@@ -7,6 +7,7 @@ import querystring from 'query-string';
 const PersonProfile = (props) => {
 
     // the following line of code doesn't work with all browsers
+    // https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams#Browser_compatibility
     // const query = new URLSearchParams(props.location.search);
     // const name = query.get('name');
     // const occupation = query.get('occupation');
