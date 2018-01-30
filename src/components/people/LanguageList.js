@@ -15,7 +15,7 @@ class LanguageList extends React.Component {
     componentWillReceiveProps = (nextProps) => {
         this.setState({
             letter: nextProps.match.params.letter
-        })
+        });
     };
 
     render = () => {
