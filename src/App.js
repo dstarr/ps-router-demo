@@ -16,6 +16,7 @@ import ProtectedRoute from './components/secure/ProtectedRoute';
 import PersonProfileContainer from './containers/PersonProfileContainer';
 import People from './components/people/People';
 import RecursiveColorSwatch from './components/colors/RecursiveColorSwatch';
+import Unicorn from "./components/unicorn/Unicorn";
 
 
 const App = () => {
@@ -45,6 +46,9 @@ const App = () => {
                         <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
                         <Route path={'/login'} component={Login}/>
                         <Route path={'/logout'} component={Logout}/>
+
+                        // unicorn
+                        <Route path={'/unicorn'} component={Unicorn} />
 
                         // page not found route
                         <Route component={PageNotFound}/>
