@@ -47,9 +47,6 @@ const App = () => {
                         <Route path={'/login'} component={Login}/>
                         <Route path={'/logout'} component={Logout}/>
 
-                        // unicorn
-                        <Route path={'/unicorn'} component={Unicorn} />
-
                         // page not found route
                         <Route component={PageNotFound}/>
                     </Switch>
