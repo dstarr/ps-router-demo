@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Route, withRouter} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 
 const RecursiveColorSwatch = ({match}) => {
 
@@ -7,8 +7,7 @@ const RecursiveColorSwatch = ({match}) => {
     const text = match.params.text;
 
     // stop the recursion
-    if( color === '' ||  text === '' ||
-        color === undefined ||  text === undefined)
+    if( color === '' ||  text === '' || color === undefined ||  text === undefined)
         return null;
 
     const style={
