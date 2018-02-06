@@ -72,16 +72,16 @@ li.nav {
 }
 
 /* for fades / transitions */
-.fade-enter {
+.trans-enter {
   opacity: 0;
   z-index: 1;
 }
 
-.fade-exit {
+.trans-exit {
     display: none;
 }
 
-.fade-enter.fade-enter-active {
+.trans-enter.trans-enter-active {
   opacity: 1;
   transition: opacity 1000ms ease-in;
 }

@@ -19,7 +19,7 @@ const Fade = ({match, location}) => {
             </h4>
 
             <TransitionGroup>
-                <CSSTransition key={location.key} classNames={'fade'} timeout={1000}>
+                <CSSTransition key={location.key} classNames={'trans'} timeout={1000}>
                     <Switch location={location}>
                         <Route path={`${match.url}`} component={LoremNumber} exact/>
                         <Route path={`${match.url}/:id`} component={LoremNumber}/>
