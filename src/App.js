@@ -17,6 +17,7 @@ import PersonProfileContainer from './containers/PersonProfileContainer';
 import People from './components/people/People';
 import RecursiveColorSwatch from './components/colors/RecursiveColorSwatch';
 import Unicorn from "./components/unicorn/Unicorn";
+import Fade from "./components/transitions/Fade";
 
 
 const App = () => {
@@ -49,6 +50,9 @@ const App = () => {
 
                         // unicorn
                         <Route path={'/unicorn'} component={Unicorn} />
+
+                        // fading and transitions
+                        <Route path={'/transitions'} component={Fade} />
 
                         // page not found route
                         <Route component={PageNotFound}/>

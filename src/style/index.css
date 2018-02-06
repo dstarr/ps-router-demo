@@ -70,3 +70,18 @@ li.nav {
     width: 80px;
     margin-top: 20px;
 }
+
+/* for fades / transitions */
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-exit {
+    display: none;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
