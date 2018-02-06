@@ -37,22 +37,15 @@ const App = () => {
                         <Route path='/prompt' component={NameForm}/>
                         <Route path='/logging' component={LoggingHome}/>
 
-                        // people
                         <Route path={'/people/:id'} component={PersonProfileContainer}/>
                         <Route path={'/people'} component={People}/>
 
-                        // secure routes
                         <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
                         <Route path={'/login'} component={Login}/>
                         <Route path={'/logout'} component={Logout}/>
 
-                        // unicorn
                         <Route path={'/unicorn'} component={Unicorn} />
-
-                        // fading and transitions
                         <Route path={'/transitions'} component={Fade} />
-
-                        // page not found route
                         <Route component={PageNotFound}/>
                     </Switch>
 
