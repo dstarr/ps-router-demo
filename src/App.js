@@ -31,10 +31,8 @@ const App = () => {
                         <Route path='/prompt' component={NameForm}/>
                         <Route path='/logging' component={LoggingHome}/>
 
-                        // secure routes
                         <Route path={'/protected'} component={ProtectedHome}/>
 
-                        /// page not found route
                         <Route component={PageNotFound}/>
                     </Switch>
 
