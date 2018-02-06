@@ -35,14 +35,10 @@ const App = () => {
                         <Route path='/prompt' component={NameForm}/>
                         <Route path='/logging' component={LoggingHome}/>
 
-                        // people
-
-                        // secure routes
                         <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
                         <Route path={'/login'} component={Login}/>
                         <Route path={'/logout'} component={Logout}/>
 
-                        // page not found route
                         <Route component={PageNotFound}/>
                     </Switch>
 
