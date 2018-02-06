@@ -9,7 +9,6 @@ const Sidebar = () => {
         {name: 'Logging', url: '/logging'},
         {name: 'People', url: '/people'},
         {name: 'Prompt', url: '/prompt'},
-        {name: 'Prop Viewer', url: '/propview'},
         {name: 'Protected', url: '/protected'},
         {name: 'Recursive', url: '/colors/Yellow/FFEC40'},
         {name: 'Transitions', url: '/transitions'},
