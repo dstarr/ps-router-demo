@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 const Sidebar = () => {
 
     return (
-        <div className={'leftNavContainer'}>
+        <div className='leftNavContainer'>
             <Link to='/' className='navLink'>Home</Link>
         </div>
     );
