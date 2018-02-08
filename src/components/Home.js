@@ -9,7 +9,7 @@ const Home = () => {
     };
 
     return(
-        <img style={imgStyle} src={'/assets/codelife.png'} />
+        <img style={imgStyle} src='/assets/codelife.png' />
     );
 };
 
