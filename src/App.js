@@ -15,10 +15,7 @@ const App = () => {
                 <div className={'rightContentContainer'}>
 
                     <Switch>
-                        <Route path='/' component={Home}/>
-                        <Route path='/' component={Home}/>
-                        <Route path='/' component={Home}/>
-                        <Route path='/' component={Home}/>
+                        <Route path='/' component={Home} exact={true}/>
                     </Switch>
 
                 </div>
