@@ -1,17 +1,16 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import {Image} from "react-bootstrap";
 
 const Header = () => {
 
     return (
         <header className='header'>
-            <Link to={'/'}>
+            <a href={'/'}>
                 <Image src={"/assets/Retro_Pluralsight_White.png"} className={'header-logo'} />
-            </Link>
+            </a>
 
             <div className={'header-text'}>
-                React Router
+                React Router 4
             </div>
 
         </header>
