@@ -24,7 +24,6 @@
     "react-cookie": "^2.1.2",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
     "redux-immutable-state-invariant": "^2.1.0",
     "superagent": "^3.8.2",

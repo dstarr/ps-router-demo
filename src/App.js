@@ -8,7 +8,7 @@ const App = () => {
         <div>
             <Header/>
             <Sidebar/>
-            <div className={'rightContentContainer'}>
+            <div className='rightContentContainer'>
 
                 <h1>Welcome to the Course</h1>
 
