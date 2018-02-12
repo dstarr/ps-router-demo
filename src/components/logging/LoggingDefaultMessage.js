@@ -1,9 +1,6 @@
 import React from 'react';
 
-const LoggingDefaultMessage = (props) => {
-
-    const eid = props['eid'];
-    console.log('EID: ' + eid);
+const LoggingDefaultMessage = () => {
 
     return (
         <div>
