@@ -1,12 +1,15 @@
 import React from 'react';
 
-const LoggingDefaultMessage = () => {
+const LoggingDefaultMessage = (props) => {
+
+    const eid = props['eid'];
+    console.log('EID: ' + eid);
 
     return (
         <div>
             <h3>Front Matter</h3>
             <p>
-                This page is not being logged. The links above should log an event whenever they are clicked.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tincidunt, dui ac condimentum pharetra, massa ligula pretium enim, nec dictum ligula orci quis mauris. Maecenas in malesuada ante. Etiam auctor tellus nec metus suscipit, at malesuada elit dictum. Vivamus tellus augue, pulvinar sed interdum id, suscipit eu arcu. Duis volutpat condimentum auctor. Nulla facilisi. Nullam tincidunt lobortis pharetra.
             </p>
         </div>
     );
