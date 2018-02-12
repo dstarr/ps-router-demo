@@ -5,10 +5,10 @@ const Sidebar = () => {
 
     const links = [
         {name: 'Home', url: '/'},
-        {name: 'Prop Viewer', url: '/propview'},
         {name: 'Color', url: '/color'},
-        {name: 'Prompt', url: '/prompt'},
         {name: 'Logging', url: '/logging'},
+        {name: 'Prompt', url: '/prompt'},
+        {name: 'Prop Viewer', url: '/propview'},
         {name: '404 Error', url: '/404Error'},
     ];
 
