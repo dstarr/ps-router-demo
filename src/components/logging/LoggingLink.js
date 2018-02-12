@@ -6,15 +6,12 @@ class LoggingLink extends React.Component {
 
     constructor(props) {
         super(props);
-
     }
 
     render = () => {
 
-        // replace works on the history stack
         return (
-            <Link to={this.props.to}
-                  replace={this.props.replace}
+            <Link {...this.props}
                   onClick={this.handleClick}
             >{this.props.children}</Link>
         );
