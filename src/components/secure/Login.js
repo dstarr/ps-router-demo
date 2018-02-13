@@ -15,7 +15,7 @@ class Login extends React.Component {
 
     render = () => {
 
-        const {target} = this.props.location.state || {target: {pathname: '/protected'}};
+        const {target} = this.props.location.state || {target: {pathname: '/private'}};
 
         if (this.state.loggedIn) {
             return <Redirect to={target}/>;

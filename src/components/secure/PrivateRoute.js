@@ -7,14 +7,19 @@ const ProtectedRoute = ({component: Component, ...rest}) => (
            render={(props) => (
                authService.isAuthenticated()
                    ? <Component {...props} />
-                   : <Redirect to={
-                       {
-                           pathname: '/login',
-                           state: { target: props.location }
-                       }
-                   }/>
+                   : <Redirect to='/login' />
            )}
     />
 );
 
 export default ProtectedRoute;
+
+
+
+
+{/*<Redirect to={*/}
+    {/*{*/}
+        {/*pathname: '/login',*/}
+        {/*state: { target: props.location }*/}
+    {/*}*/}
+{/*}/>*/}

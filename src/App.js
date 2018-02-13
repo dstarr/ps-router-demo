@@ -12,7 +12,7 @@ import LoggingHome from './components/logging/LoggingHome';
 import ProtectedHome from './components/secure/ProtectedHome';
 import Login from './components/secure/Login';
 import Logout from './components/secure/Logout';
-import ProtectedRoute from './components/secure/ProtectedRoute';
+import PrivateRoute from './components/secure/PrivateRoute';
 
 const App = () => {
 
@@ -32,7 +32,7 @@ const App = () => {
                         <Route path='/prompt' component={NameForm}/>
                         <Route path='/logging' component={LoggingHome}/>
 
-                        <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
+                        <PrivateRoute path={'/protected'} component={ProtectedHome}/>
                         <Route path={'/login'} component={Login}/>
                         <Route path={'/logout'} component={Logout}/>
 
