@@ -13,8 +13,7 @@ import ProtectedHome from './components/secure/ProtectedHome';
 import Login from './components/secure/Login';
 import Logout from './components/secure/Logout';
 import ProtectedRoute from './components/secure/ProtectedRoute';
-import PersonProfileContainer from './containers/PersonProfileContainer';
-import People from './components/people/People';
+import SmartColorSwatch from './components/colors/SmartColorSwatch';
 
 
 const App = () => {
@@ -32,9 +31,11 @@ const App = () => {
                         <Route path='/prompt' component={NameForm}/>
                         <Route path='/logging' component={LoggingHome}/>
 
+                        <Route path='/color/:text/:color' component={SmartColorSwatch}/>
+
                         <Route path='/color' render={() => {
                             return <ColorSwatch text='Red' color='#ff0000'/>
-                        }} />
+                        }} exact/>
 
                         <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
                         <Route path={'/login'} component={Login}/>

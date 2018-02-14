@@ -12,7 +12,7 @@ const Sidebar = () => {
         {name: 'Prompt', url: '/prompt'},
         {name: 'Prop Viewer', url: '/propview'},
         {name: 'Protected', url: '/protected'},
-        {name: 'Smart Color', url: '/color/Green/#00ff00'},
+        {name: 'Smart Color', url: '/color/Green/00ff00'},
         {name: '404 Error', url: '/404Error'},
     ];
 
