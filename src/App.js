@@ -29,11 +29,12 @@ const App = () => {
                     <Switch>
                         <Route path='/' component={Home} exact/>
                         <Route path='/propview' component={PropViewer}/>
-                        <Route path='/color' render={() => {
-                            return <ColorSwatch text='Red' color='#ff0000'/>
-                        }}/>
                         <Route path='/prompt' component={NameForm}/>
                         <Route path='/logging' component={LoggingHome}/>
+
+                        <Route path='/color' render={() => {
+                            return <ColorSwatch text='Red' color='#ff0000'/>
+                        }} />
 
                         <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
                         <Route path={'/login'} component={Login}/>
