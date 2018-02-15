@@ -32,10 +32,9 @@ const App = () => {
                         <Route path='/logging' component={LoggingHome}/>
 
                         <Route path='/color/:text/:color' component={SmartColorSwatch}/>
-
                         <Route path='/color' render={() => {
                             return <ColorSwatch text='Red' color='#ff0000'/>
-                        }} exact/>
+                        }} />
 
                         <ProtectedRoute path={'/protected'} component={ProtectedHome}/>
                         <Route path={'/login'} component={Login}/>
