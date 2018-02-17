@@ -30,9 +30,13 @@ const Sidebar = () => {
             <ul>
                 {linksComponents}
             </ul>
-            <Link to={'/unicorn'}>
-                <img src='/assets/unicorn.png' width={100}/>
+            <Link to='/pets'>
+                <Image src='/assets/unicorn.png' width={100}/>
             </Link>
+
+
+
+
         </div>
     );
 };

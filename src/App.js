@@ -43,7 +43,8 @@ const App = () => {
                         <Route path={'/login'} component={Login}/>
                         <Route path={'/logout'} component={Logout}/>
 
-                        <Route path={'/unicorn'} component={Unicorn} />
+                        <Route path={'/pets'} component={Unicorn} />
+                        <Redirect from='pets' to='unicorn' />
 
                         <Route component={PageNotFound}/>
                     </Switch>
